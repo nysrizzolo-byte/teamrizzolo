@@ -36,12 +36,21 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 .pane{display:none}
 .pane.active{display:block}
 .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-bottom:28px}
-.kpi{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px}
+.kpi{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;position:relative;overflow:visible}
 .kpi-label{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-bottom:7px}
 .kpi-value{font-size:26px;font-weight:700;line-height:1}
 .kpi-sub{font-size:11px;color:var(--text3);margin-top:5px}
+/* hover tooltips */
+.tip{cursor:help}
+.info{display:inline-block;margin-left:5px;width:13px;height:13px;line-height:12px;text-align:center;border:1px solid var(--text3);border-radius:50%;font-size:9px;font-weight:700;font-style:normal;color:var(--text3);vertical-align:middle;text-transform:none;letter-spacing:0}
+.tip:hover .info{border-color:var(--blue);color:var(--blue)}
+.tip-pop{position:absolute;bottom:calc(100% + 9px);left:0;width:250px;max-width:82vw;background:#0e1014;border:1px solid var(--border2);border-radius:9px;padding:11px 13px;font-size:11px;font-weight:400;line-height:1.55;color:var(--text2);opacity:0;visibility:hidden;transform:translateY(4px);transition:opacity .15s,transform .15s,visibility .15s;z-index:60;box-shadow:0 10px 30px rgba(0,0,0,.55);text-transform:none;letter-spacing:normal;text-align:left;pointer-events:none}
+.tip-pop b{color:var(--text);font-weight:700}
+.tip-pop::after{content:"";position:absolute;top:100%;left:20px;border:6px solid transparent;border-top-color:var(--border2)}
+.tip:hover .tip-pop{opacity:1;visibility:visible;transform:translateY(0)}
+.section-title .info{vertical-align:baseline}
 .section{margin-bottom:32px}
-.section-title{font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.section-title{font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--border);position:relative}
 .tbl-wrap{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden}
 .tbl-scroll{overflow-x:auto}
 table{width:100%;border-collapse:collapse;font-size:12px}
@@ -107,7 +116,7 @@ tr:hover td{background:var(--bg3)}
     <div class="nav-item" onclick="showPane('weekly',this)"><span class="nav-dot" style="background:#cab641"></span>Weekly (Jun 29–Jul 5)</div>
     <div class="nav-item" onclick="showPane('mtd',this)"><span class="nav-dot" style="background:#ff642e"></span>MTD (July 2026)</div>
     <div class="sidebar-footer">
-      <div class="run-date">Last data pull<br><strong style="color:#aaa">Jul 6, 2026</strong><br><br>293 leads · 71 funded<br>$40.35M volume<br>$20.5M rolling pipeline</div>
+      <div class="run-date">Last data pull<br><strong style="color:#aaa">Jul 6, 2026</strong><br><br>293 leads · 71 funded<br>$40.35M volume<br>$19.9M rolling pipeline</div>
     </div>
   </nav>
 
@@ -118,16 +127,16 @@ tr:hover td{background:var(--bg3)}
       <div class="page-header">
         <div class="page-eyebrow">2026 Year-to-Date</div>
         <div class="page-title">Team Overview</div>
-        <div class="page-sub">Jan 1 – Jul 6, 2026 · Fundings by closing date, attributed to L/O column</div>
+        <div class="page-sub">Jan 1 – Jul 6, 2026 · Fundings by closing date, attributed to L/O column · Hover any <span class="info">i</span> for a definition</div>
       </div>
       <div class="kpi-grid">
-        <div class="kpi"><div class="kpi-label">YTD Leads</div><div class="kpi-value" style="color:var(--blue)">293</div><div class="kpi-sub">Jan–Jul 6</div></div>
-        <div class="kpi"><div class="kpi-label">Rolling Pipeline</div><div class="kpi-value" style="color:var(--amber)">$20.5M</div><div class="kpi-sub">36 active deals</div></div>
-        <div class="kpi"><div class="kpi-label">Closed / Funded</div><div class="kpi-value" style="color:var(--green)">71</div><div class="kpi-sub">YTD loans</div></div>
-        <div class="kpi"><div class="kpi-label">Funded Volume</div><div class="kpi-value" style="color:var(--purple)">$40.4M</div><div class="kpi-sub">YTD</div></div>
-        <div class="kpi"><div class="kpi-label">Pull-Through</div><div class="kpi-value" style="color:var(--teal)">24.2%</div><div class="kpi-sub">71 / 293 leads</div></div>
+        <div class="kpi tip"><div class="kpi-label">YTD Leads<span class="info">i</span></div><div class="kpi-value" style="color:var(--blue)">293</div><div class="kpi-sub">Jan–Jul 6</div><div class="tip-pop"><b>YTD Leads.</b> Every Lead Board entry created in 2026, credited to the loan officer who logged it. Matt's leads count toward Elvis &amp; Matt (Apr+); assistant-entered leads go to the assigned L/O.</div></div>
+        <div class="kpi tip"><div class="kpi-label">Rolling Pipeline<span class="info">i</span></div><div class="kpi-value" style="color:var(--amber)">$19.9M</div><div class="kpi-sub">35 active deals</div><div class="tip-pop"><b>Active Rolling Pipeline.</b> Every deal still in process and <b>not yet Closed/Funded</b> — the Working/Disclosures and Setup Milestone groups plus the current month (July) and next month (August). Loans already funded this month are excluded. The dollar figure sums each deal's actual value. It "rolls" forward on the 1st of each month.</div></div>
+        <div class="kpi tip"><div class="kpi-label">Closed / Funded<span class="info">i</span></div><div class="kpi-value" style="color:var(--green)">71</div><div class="kpi-sub">YTD loans</div><div class="tip-pop"><b>Closed / Funded.</b> Count of loans that reached Closed/Funded with a 2026 closing date, across every monthly group.</div></div>
+        <div class="kpi tip"><div class="kpi-label">Funded Volume<span class="info">i</span></div><div class="kpi-value" style="color:var(--purple)">$40.4M</div><div class="kpi-sub">YTD</div><div class="tip-pop"><b>Funded Volume.</b> Total dollar volume of all 2026 Closed/Funded loans (sum of actual loan values).</div></div>
+        <div class="kpi tip"><div class="kpi-label">Pull-Through<span class="info">i</span></div><div class="kpi-value" style="color:var(--teal)">24.2%</div><div class="kpi-sub">71 / 293 leads</div><div class="tip-pop"><b>Pull-Through.</b> 2026 funded loans ÷ YTD leads — the share of leads that become a funded loan. Team average is 24.2%.</div></div>
       </div>
-      <div class="note-strip"><strong>Active Rolling Pipeline: $20.5M across 36 deals</strong> — WORKING/DISCLOSURES + SETUP MILESTONE + July + August 2026. June's book funded and rolled off since the late-June $31.5M reading; July + August now rebuilding.</div>
+      <div class="note-strip"><strong>Active Rolling Pipeline: $19.9M across 35 deals</strong> — everything still in process and not yet Closed/Funded: Working/Disclosures + Setup Milestone + July + August 2026. Deals that already funded this month are excluded, so this reflects only live, open opportunities. Down from the ~$31.5M late-June reading as June's book funded and rolled off.</div>
       <div class="section">
         <div class="section-title">Monthly Team Lead Intake</div>
         <div class="chart-card">
@@ -159,7 +168,7 @@ tr:hover td{background:var(--bg3)}
           </div>
           <div class="insight-card" style="border-color:rgba(255,100,46,.3)">
             <div class="insight-header" style="color:var(--orange)">Worth Watching</div>
-            <div class="insight-item"><span class="insight-icon">!</span>Rolling pipeline sits at $20.5M / 36 deals — down from $31.5M in late June as June's book funded out. July + August need to rebuild depth.</div>
+            <div class="insight-item"><span class="insight-icon">!</span>Rolling pipeline sits at $19.9M / 35 open deals — down from $31.5M in late June as June's book funded out. July + August need to rebuild depth.</div>
             <div class="insight-item"><span class="insight-icon">!</span>Richard's new lead flow has nearly stopped — 1 in June, 0 in July so far. His funded volume is coming from older pipeline.</div>
             <div class="insight-item"><span class="insight-icon">!</span>Yhma and Theresa remain cold on new intake — minimal leads since spring.</div>
             <div class="insight-item"><span class="insight-icon">!</span>Elvis &amp; Matt pull-through stays low vs team avg (expected for 203K) — benchmark against 40% lead-to-board / 20% app targets.</div>
@@ -199,22 +208,22 @@ tr:hover td{background:var(--bg3)}
         <p style="font-size:10px;color:var(--text3);margin-top:8px">★ Matt Apr+ credited jointly with Elvis Regis (203K outreach). Jan–Mar solo. Leads credited by creator of the Lead Board entry. * Jul through Jul 6.</p>
       </div>
       <div class="section">
-        <div class="section-title">Active Rolling Pipeline by LO (WORKING + SETUP + Jul + Aug 2026)</div>
+        <div class="section-title tip">Active Rolling Pipeline by LO<span class="info">i</span><div class="tip-pop"><b>Active Rolling Pipeline by LO.</b> Open deals not yet Closed/Funded, from the Working/Disclosures + Setup Milestone groups plus July and August 2026. Deals already funded this month are excluded. Volume sums each deal's actual value.</div></div>
         <div class="tbl-wrap"><div class="tbl-scroll">
         <table>
           <thead><tr><th>Loan Officer</th><th>Deals</th><th>Volume</th><th>Avg / Deal</th></tr></thead>
           <tbody>
-            <tr><td style="color:var(--blue)">Sal Rizzolo</td><td>20</td><td>$10.96M</td><td>$548K</td></tr>
+            <tr><td style="color:var(--blue)">Sal Rizzolo</td><td>19</td><td>$10.36M</td><td>$545K</td></tr>
             <tr><td style="color:var(--green)">Felix Diaz</td><td>7</td><td>$4.11M</td><td>$587K</td></tr>
             <tr><td style="color:var(--orange)">Richard Luxmore</td><td>3</td><td>$1.81M</td><td>$604K</td></tr>
-            <tr><td style="color:var(--amber)">Elvis &amp; Matt</td><td>3</td><td>$1.80M</td><td>$601K</td></tr>
+            <tr><td style="color:var(--amber)">Elvis &amp; Matt</td><td>3</td><td>$1.80M</td><td>$598K</td></tr>
             <tr><td style="color:var(--text3)">James Codomo</td><td>2</td><td>$1.64M</td><td>$820K</td></tr>
             <tr><td style="color:var(--cyan)">Theresa Feehan</td><td>1</td><td>$0.21M</td><td>$215K</td></tr>
-            <tr class="team-row"><td>Team Total</td><td>36</td><td>$20.53M</td><td>$570K</td></tr>
+            <tr class="team-row"><td>Team Total</td><td>35</td><td>$19.93M</td><td>$569K</td></tr>
           </tbody>
         </table>
         </div></div>
-        <p style="font-size:10px;color:var(--text3);margin-top:8px">Every deal in the 4 rolling groups regardless of stage; excludes LOST/DEAD/LIFE SUPPORT, past funded months, and 2024/2025 fundings.</p>
+        <p style="font-size:10px;color:var(--text3);margin-top:8px">Open deals only — excludes anything already Closed/Funded, plus LOST/DEAD/LIFE SUPPORT, past funded months, and 2024/2025 fundings.</p>
       </div>
       <div class="section">
         <div class="section-title">Closed / Funded by LO (by closing date · all 2026 fundings)</div>
@@ -242,13 +251,13 @@ tr:hover td{background:var(--bg3)}
       <div class="page-header">
         <div class="page-eyebrow">2026 Year-to-Date</div>
         <div class="page-title">Leads vs In Contract</div>
-        <div class="page-sub">Pull-through rate by loan officer · In-contract = active rolling pipeline deals</div>
+        <div class="page-sub">Pull-through rate by loan officer · In-contract = active rolling pipeline (open deals)</div>
       </div>
       <div class="kpi-grid">
-        <div class="kpi"><div class="kpi-label">YTD Leads</div><div class="kpi-value" style="color:var(--blue)">293</div></div>
-        <div class="kpi"><div class="kpi-label">In Contract</div><div class="kpi-value" style="color:var(--amber)">36</div><div class="kpi-sub">rolling pipeline</div></div>
-        <div class="kpi"><div class="kpi-label">Funded</div><div class="kpi-value" style="color:var(--green)">71</div></div>
-        <div class="kpi"><div class="kpi-label">Pull-Through</div><div class="kpi-value" style="color:var(--teal)">24.2%</div></div>
+        <div class="kpi tip"><div class="kpi-label">YTD Leads<span class="info">i</span></div><div class="kpi-value" style="color:var(--blue)">293</div><div class="tip-pop"><b>YTD Leads.</b> Every 2026 Lead Board entry, credited to the loan officer who logged it.</div></div>
+        <div class="kpi tip"><div class="kpi-label">In Contract<span class="info">i</span></div><div class="kpi-value" style="color:var(--amber)">35</div><div class="kpi-sub">rolling pipeline</div><div class="tip-pop"><b>In Contract.</b> Open deals in the active rolling pipeline — Working/Setup + current and next month — that are not yet Closed/Funded.</div></div>
+        <div class="kpi tip"><div class="kpi-label">Funded<span class="info">i</span></div><div class="kpi-value" style="color:var(--green)">71</div><div class="tip-pop"><b>Funded.</b> 2026 loans that reached Closed/Funded, by closing date.</div></div>
+        <div class="kpi tip"><div class="kpi-label">Pull-Through<span class="info">i</span></div><div class="kpi-value" style="color:var(--teal)">24.2%</div><div class="tip-pop"><b>Pull-Through.</b> Funded loans ÷ YTD leads. Higher = leads convert more often.</div></div>
       </div>
       <div class="section">
         <div class="section-title">Pull-Through Rate by LO</div>
@@ -258,17 +267,17 @@ tr:hover td{background:var(--bg3)}
           <tbody>
             <tr><td style="color:var(--cyan)">Theresa Feehan</td><td>14</td><td>1</td><td>6</td><td class="td-bold">42.9%</td><td style="text-align:left"><span class="badge badge-green">Strong</span></td></tr>
             <tr><td style="color:var(--orange)">Richard Luxmore</td><td>35</td><td>3</td><td>15</td><td class="td-bold">42.9%</td><td style="text-align:left"><span class="badge badge-green">Strong</span></td></tr>
-            <tr><td style="color:var(--blue)">Sal Rizzolo</td><td>151</td><td>20</td><td>45</td><td class="td-bold">29.8%</td><td style="text-align:left"><span class="badge badge-green">Strong</span></td></tr>
+            <tr><td style="color:var(--blue)">Sal Rizzolo</td><td>151</td><td>19</td><td>45</td><td class="td-bold">29.8%</td><td style="text-align:left"><span class="badge badge-green">Strong</span></td></tr>
             <tr><td style="color:var(--teal)">Yhma Karimy</td><td>10</td><td>0</td><td>1</td><td class="td-bold">10.0%</td><td style="text-align:left"><span class="badge badge-orange">Low</span></td></tr>
             <tr><td style="color:var(--green)">Felix Diaz</td><td>16</td><td>7</td><td>1</td><td class="td-bold">6.2%★</td><td style="text-align:left"><span class="badge badge-gray">Ramping</span></td></tr>
             <tr><td style="color:var(--amber)">Elvis &amp; Matt</td><td>38</td><td>3</td><td>1</td><td class="td-bold">2.6%★</td><td style="text-align:left"><span class="badge badge-gray">203K norm</span></td></tr>
             <tr><td style="color:var(--text3)">James Codomo</td><td>1</td><td>2</td><td>2</td><td class="td-bold">n/a</td><td style="text-align:left"><span class="badge badge-gray">creator-credit quirk</span></td></tr>
             <tr><td style="color:var(--purple)">Matt Porcaro</td><td>20</td><td>—</td><td>—</td><td class="td-bold">—</td><td style="text-align:left"><span class="badge badge-gray">Jan–Mar only</span></td></tr>
-            <tr class="team-row"><td>Team Total</td><td>293</td><td>36</td><td>71</td><td>24.2%</td><td style="text-align:left"></td></tr>
+            <tr class="team-row"><td>Team Total</td><td>293</td><td>35</td><td>71</td><td>24.2%</td><td style="text-align:left"></td></tr>
           </tbody>
         </table>
         </div></div>
-        <p style="font-size:10px;color:var(--text3);margin-top:8px">Pull-through = 2026 funded loans ÷ YTD leads (Lead Board, credited by creator). In-contract = active rolling pipeline deals. ★ 203K target: 40% lead-to-board / 20% app rate. James funds come from deals originated under other creators.</p>
+        <p style="font-size:10px;color:var(--text3);margin-top:8px">Pull-through = 2026 funded loans ÷ YTD leads (Lead Board, credited by creator). In-contract = open rolling-pipeline deals (not yet Closed/Funded). ★ 203K target: 40% lead-to-board / 20% app rate. James funds come from deals originated under other creators.</p>
       </div>
       <div class="section">
         <div class="section-title">Monthly Leads vs Funded (Team)</div>
@@ -291,11 +300,11 @@ tr:hover td{background:var(--bg3)}
         <div class="page-sub">All 2026 fundings by closing date, attributed to L/O column</div>
       </div>
       <div class="kpi-grid">
-        <div class="kpi"><div class="kpi-label">YTD Volume</div><div class="kpi-value" style="color:var(--purple)">$40.4M</div></div>
-        <div class="kpi"><div class="kpi-label">Sal Rizzolo</div><div class="kpi-value" style="color:var(--blue)">$25.6M</div><div class="kpi-sub">63.4%</div></div>
-        <div class="kpi"><div class="kpi-label">Richard</div><div class="kpi-value" style="color:var(--orange)">$8.6M</div><div class="kpi-sub">21.4%</div></div>
-        <div class="kpi"><div class="kpi-label">Theresa</div><div class="kpi-value" style="color:var(--cyan)">$3.3M</div><div class="kpi-sub">8.2%</div></div>
-        <div class="kpi"><div class="kpi-label">Avg / Loan</div><div class="kpi-value" style="color:var(--teal)">$568K</div></div>
+        <div class="kpi tip"><div class="kpi-label">YTD Volume<span class="info">i</span></div><div class="kpi-value" style="color:var(--purple)">$40.4M</div><div class="tip-pop"><b>YTD Volume.</b> Sum of actual loan value for every 2026 Closed/Funded loan.</div></div>
+        <div class="kpi tip"><div class="kpi-label">Sal Rizzolo<span class="info">i</span></div><div class="kpi-value" style="color:var(--blue)">$25.6M</div><div class="kpi-sub">63.4%</div><div class="tip-pop"><b>Sal's share.</b> Sal's funded volume ($25.59M / 45 loans) = 63.4% of the team's YTD funded volume.</div></div>
+        <div class="kpi tip"><div class="kpi-label">Richard<span class="info">i</span></div><div class="kpi-value" style="color:var(--orange)">$8.6M</div><div class="kpi-sub">21.4%</div><div class="tip-pop"><b>Richard's share.</b> $8.64M / 15 loans = 21.4% of team YTD funded volume.</div></div>
+        <div class="kpi tip"><div class="kpi-label">Theresa<span class="info">i</span></div><div class="kpi-value" style="color:var(--cyan)">$3.3M</div><div class="kpi-sub">8.2%</div><div class="tip-pop"><b>Theresa's share.</b> $3.32M / 6 loans = 8.2% of team YTD funded volume.</div></div>
+        <div class="kpi tip"><div class="kpi-label">Avg / Loan<span class="info">i</span></div><div class="kpi-value" style="color:var(--teal)">$568K</div><div class="tip-pop"><b>Average loan size.</b> Total YTD funded volume ÷ number of funded loans ($40.35M ÷ 71).</div></div>
       </div>
       <div class="section">
         <div class="section-title">Monthly Funded Volume (Team)</div>
@@ -339,10 +348,10 @@ tr:hover td{background:var(--bg3)}
         <div class="page-sub">Jun 29 – Jul 5, 2026</div>
       </div>
       <div class="kpi-grid">
-        <div class="kpi"><div class="kpi-label">Week Leads</div><div class="kpi-value" style="color:var(--blue)">7</div><div class="kpi-sub">Jun 29–Jul 5</div></div>
-        <div class="kpi"><div class="kpi-label">Fundings</div><div class="kpi-value" style="color:var(--green)">3</div><div class="kpi-sub">$1.84M</div></div>
-        <div class="kpi"><div class="kpi-label">Active LOs</div><div class="kpi-value" style="color:var(--green)">3</div><div class="kpi-sub">on leads</div></div>
-        <div class="kpi"><div class="kpi-label">Zero-Lead LOs</div><div class="kpi-value" style="color:var(--red)">4</div><div class="kpi-sub">flagged</div></div>
+        <div class="kpi tip"><div class="kpi-label">Week Leads<span class="info">i</span></div><div class="kpi-value" style="color:var(--blue)">7</div><div class="kpi-sub">Jun 29–Jul 5</div><div class="tip-pop"><b>Week Leads.</b> Lead Board entries created Jun 29–Jul 5, credited to the loan officer who logged each one.</div></div>
+        <div class="kpi tip"><div class="kpi-label">Fundings<span class="info">i</span></div><div class="kpi-value" style="color:var(--green)">3</div><div class="kpi-sub">$1.84M</div><div class="tip-pop"><b>Fundings.</b> Loans that reached Closed/Funded with a closing date in Jun 29–Jul 5 ($1.84M total).</div></div>
+        <div class="kpi tip"><div class="kpi-label">Active LOs<span class="info">i</span></div><div class="kpi-value" style="color:var(--green)">3</div><div class="kpi-sub">on leads</div><div class="tip-pop"><b>Active LOs.</b> Loan officers who logged at least one lead this week (Sal, Elvis &amp; Matt, Felix).</div></div>
+        <div class="kpi tip"><div class="kpi-label">Zero-Lead LOs<span class="info">i</span></div><div class="kpi-value" style="color:var(--red)">4</div><div class="kpi-sub">flagged</div><div class="tip-pop"><b>Zero-Lead LOs.</b> Core loan officers who logged no new leads this week (Richard, Theresa, Yhma, James).</div></div>
       </div>
       <div class="section">
         <div class="section-title">Lead Intake by LO</div>
@@ -387,10 +396,10 @@ tr:hover td{background:var(--bg3)}
       </div>
       <div class="note-strip"><strong>Previous-day digest (Jul 5):</strong> 0 new leads. Most recent activity: Jul 3 (1 · Elvis &amp; Matt), Jul 1 (2 · Sal).</div>
       <div class="kpi-grid">
-        <div class="kpi"><div class="kpi-label">Jul MTD Leads</div><div class="kpi-value" style="color:var(--blue)">3</div><div class="kpi-sub">Jul 1–6</div></div>
-        <div class="kpi"><div class="kpi-label">Run Rate</div><div class="kpi-value" style="color:var(--amber)">~15</div><div class="kpi-sub">proj. month-end</div></div>
-        <div class="kpi"><div class="kpi-label">Active LOs</div><div class="kpi-value" style="color:var(--green)">2</div></div>
-        <div class="kpi"><div class="kpi-label">Jul Funded</div><div class="kpi-value" style="color:var(--purple)">1</div><div class="kpi-sub">$0.60M so far</div></div>
+        <div class="kpi tip"><div class="kpi-label">Jul MTD Leads<span class="info">i</span></div><div class="kpi-value" style="color:var(--blue)">3</div><div class="kpi-sub">Jul 1–6</div><div class="tip-pop"><b>Month-to-date leads.</b> Lead Board entries created Jul 1–6.</div></div>
+        <div class="kpi tip"><div class="kpi-label">Run Rate<span class="info">i</span></div><div class="kpi-value" style="color:var(--amber)">~15</div><div class="kpi-sub">proj. month-end</div><div class="tip-pop"><b>Run Rate.</b> Rough month-end projection from the current daily pace. Early and skewed by the Jul 4 holiday week.</div></div>
+        <div class="kpi tip"><div class="kpi-label">Active LOs<span class="info">i</span></div><div class="kpi-value" style="color:var(--green)">2</div><div class="tip-pop"><b>Active LOs.</b> Loan officers with at least one lead so far this month (Sal, Elvis &amp; Matt).</div></div>
+        <div class="kpi tip"><div class="kpi-label">Jul Funded<span class="info">i</span></div><div class="kpi-value" style="color:var(--purple)">1</div><div class="kpi-sub">$0.60M so far</div><div class="tip-pop"><b>July funded.</b> Loans that closed so far in July ($0.60M).</div></div>
       </div>
       <div class="section">
         <div class="section-title">Daily Lead Intake — July 2026</div>
@@ -422,7 +431,7 @@ tr:hover td{background:var(--bg3)}
 
     <div class="portal-footer">
       Team Rizzolo · NAF · Data pulled Jul 6, 2026<br>
-      Fundings: all 2026 closings by closing date, attributed to L/O column · 293 leads · 71 funded · $40.35M · $20.5M rolling pipeline<br><br>
+      Fundings: all 2026 closings by closing date, attributed to L/O column · 293 leads · 71 funded · $40.35M · $19.9M rolling pipeline (open deals only)<br><br>
       To update: run metrics in Claude → download new <code>index.html</code> → drag-drop to GitHub repo.
     </div>
   </main>
