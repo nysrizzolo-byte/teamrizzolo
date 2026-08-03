@@ -1,0 +1,153 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Team Rizzolo · Weekly</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+:root {
+  --bg:#13151a;--bg2:#1a1d23;--bg3:#1e2128;--border:#2a2d35;--border2:#333740;
+  --text:#e8e8e8;--text2:#aaaaaa;--text3:#666666;
+  --blue:#579bfc;--orange:#ff642e;--amber:#cab641;--green:#00c875;
+  --purple:#9d50dd;--teal:#1D9E75;--red:#ff3b3b;--cyan:#66ccff;
+  --radius:10px;--radius-lg:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;font-size:13px;line-height:1.5}
+.shell{display:flex;min-height:100vh}
+.sidebar{width:220px;flex-shrink:0;background:var(--bg2);border-right:1px solid var(--border);padding:24px 0;position:sticky;top:0;height:100vh;overflow-y:auto}
+.main{flex:1;padding:32px 36px 80px;max-width:980px}
+@media(max-width:700px){.shell{flex-direction:column}.sidebar{width:100%;height:auto;position:static;padding:16px 0 8px;border-right:none;border-bottom:1px solid var(--border)}.main{padding:20px 16px 60px}}
+.brand{padding:0 20px 20px;border-bottom:1px solid var(--border);margin-bottom:16px}
+.brand-name{font-size:15px;font-weight:700;color:var(--text)}
+.brand-sub{font-size:11px;color:var(--text3);margin-top:2px}
+.nav-section{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:1.5px;padding:0 20px;margin-bottom:6px;margin-top:16px}
+.nav-item{display:flex;align-items:center;gap:9px;padding:8px 20px;font-size:13px;color:var(--text2);cursor:pointer;border-left:2px solid transparent;transition:all .15s}
+.nav-item:hover{background:var(--bg3);color:var(--text)}
+.nav-item.active{background:rgba(87,155,252,.1);color:var(--blue);border-left-color:var(--blue)}
+.nav-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.sidebar-footer{padding:16px 20px 0;margin-top:24px;border-top:1px solid var(--border)}
+.run-date{font-size:10px;color:var(--text3);line-height:1.7}
+.page-header{margin-bottom:28px}
+.page-eyebrow{font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:5px}
+.page-title{font-size:26px;font-weight:700;color:var(--text);margin-bottom:4px}
+.page-sub{font-size:12px;color:var(--text3)}
+.pane{display:none}
+.pane.active{display:block}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-bottom:28px}
+.kpi{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px}
+.kpi-label{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-bottom:7px}
+.kpi-value{font-size:26px;font-weight:700;line-height:1}
+.kpi-sub{font-size:11px;color:var(--text3);margin-top:5px}
+.section{margin-bottom:32px}
+.section-title{font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.tbl-wrap{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden}
+.tbl-scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:12px}
+thead th{padding:10px 13px;text-align:right;color:var(--text3);font-weight:500;background:var(--bg);white-space:nowrap;border-bottom:1px solid var(--border)}
+thead th:first-child{text-align:left}
+td{padding:10px 13px;border-top:1px solid var(--bg3);text-align:right;color:var(--text2)}
+td:first-child{text-align:left;color:var(--text);font-weight:600}
+tr:hover td{background:var(--bg3)}
+.td-bold{color:var(--text);font-weight:700!important}
+.team-row td{background:var(--bg)!important;color:var(--text);font-weight:700;border-top:1px solid var(--border2)}
+.bar-row{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.bar-name{font-size:13px;font-weight:600;width:170px;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar-n{font-size:14px;font-weight:700;width:30px;text-align:right;flex-shrink:0}
+.bar-track{flex:1;background:var(--bg3);border-radius:4px;height:8px;overflow:hidden}
+.bar-fill{height:100%;border-radius:4px}
+.bar-pct{font-size:11px;color:var(--text3);width:38px;text-align:right}
+.chart-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;margin-bottom:24px}
+.chart-note{font-size:11px;color:var(--text3);margin-top:8px}
+.vol-row{display:flex;align-items:center;gap:10px;margin-bottom:9px}
+.vol-lbl{font-size:11px;color:var(--text3);width:30px;text-align:right}
+.vol-track{flex:1;background:var(--bg3);border-radius:4px;height:22px;overflow:hidden;position:relative}
+.vol-fill{height:100%;border-radius:4px}
+.vol-txt{position:absolute;right:8px;top:50%;transform:translateY(-50%);font-size:11px;font-weight:700;white-space:nowrap}
+.insight-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.insight-grid{grid-template-columns:1fr}}
+.insight-card{border:1px solid var(--border);border-radius:var(--radius-lg);padding:16px 18px}
+.insight-header{font-size:10px;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:12px}
+.insight-item{display:flex;gap:8px;padding:6px 0;border-bottom:1px solid var(--bg3);font-size:12px;color:var(--text2);line-height:1.45}
+.insight-item:last-child{border-bottom:none}
+.insight-icon{flex-shrink:0;width:16px}
+.badge{display:inline-block;padding:2px 7px;border-radius:5px;font-size:10px;font-weight:700}
+.badge-green{background:rgba(0,200,117,.12);color:var(--green);border:1px solid rgba(0,200,117,.25)}
+.badge-orange{background:rgba(255,100,46,.12);color:var(--orange);border:1px solid rgba(255,100,46,.25)}
+.badge-amber{background:rgba(202,182,65,.12);color:var(--amber);border:1px solid rgba(202,182,65,.25)}
+.badge-gray{background:rgba(100,100,100,.12);color:var(--text3);border:1px solid rgba(100,100,100,.25)}
+.note-strip{background:rgba(87,155,252,.07);border:1px solid rgba(87,155,252,.2);border-radius:var(--radius);padding:12px 16px;margin-bottom:10px;font-size:12px;color:var(--text2);line-height:1.5}
+.note-strip strong{color:var(--blue)}
+.note-strip.warn{background:rgba(255,100,46,.07);border-color:rgba(255,100,46,.2)}
+.note-strip.warn strong{color:var(--orange)}
+.note-strip.good{background:rgba(0,200,117,.07);border-color:rgba(0,200,117,.2)}
+.note-strip.good strong{color:var(--green)}
+.daily-wrap{display:flex;align-items:flex-end;gap:5px;height:90px;margin-bottom:6px}
+.day-col{display:flex;flex-direction:column;align-items:center;flex:1;height:100%}
+.day-bar{width:100%;border-radius:3px 3px 0 0;min-height:3px}
+.day-count{font-size:9px;font-weight:700;margin-bottom:3px;min-height:12px}
+.day-label{font-size:8px;color:var(--text3);margin-top:4px;white-space:nowrap}
+.portal-footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--border);font-size:11px;color:var(--text3);text-align:center;line-height:1.8}
+
+#gate{position:fixed;inset:0;background:#13151a;z-index:9999;display:flex;align-items:center;justify-content:center}
+.gate-box{background:#1a1d23;border:1px solid #2a2d35;border-radius:14px;padding:36px 40px;text-align:center;width:300px}
+.gate-title{font-size:20px;font-weight:700;color:#e8e8e8}
+.gate-sub{font-size:11px;color:#666;margin-top:2px;margin-bottom:22px}
+#pw{width:100%;padding:10px 12px;background:#13151a;border:1px solid #333740;border-radius:8px;color:#e8e8e8;font-size:14px;margin-bottom:12px;outline:none}
+#pw:focus{border-color:#579bfc}
+.gate-box button{width:100%;padding:10px;background:#579bfc;color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer}
+.gate-box button:hover{background:#4a8ce8}
+#gerr{color:#ff3b3b;font-size:11px;margin-top:10px;min-height:14px}
+a.nav-item{display:flex;align-items:center;gap:9px;padding:8px 20px;font-size:13px;color:var(--text2);border-left:2px solid transparent}
+a.nav-item:hover{background:var(--bg3);color:var(--text)}
+</style></head><body><div id="gate"><div class="gate-box"><div class="gate-title">Team Rizzolo</div><div class="gate-sub">NAF · Metrics Portal</div><input id="pw" type="password" placeholder="Password" onkeydown="if(event.key==='Enter')chk()"><button onclick="chk()">Enter</button><div id="gerr"></div></div></div><div class="shell"><main class="main" style="max-width:900px;margin:0 auto">
+      <div class="page-header">
+        <div class="page-eyebrow">Current Period</div>
+        <div class="page-title">Weekly Report</div>
+        <div class="page-sub">Jul 27–Aug 2, 2026 · this week so far · refreshed daily</div>
+      </div>
+      <div class="kpi-grid">
+        <div class="kpi"><div class="kpi-label">Week Leads</div><div class="kpi-value" style="color:var(--blue)">12</div><div class="kpi-sub">Jul 27–Aug 2</div></div>
+        <div class="kpi"><div class="kpi-label">Active Sources</div><div class="kpi-value" style="color:var(--green)">3</div></div>
+        <div class="kpi"><div class="kpi-label">Zero-Lead LOs</div><div class="kpi-value" style="color:var(--red)">6</div><div class="kpi-sub">flagged</div></div>
+      </div>
+      <div class="section">
+        <div class="section-title">Lead Intake — Credited To</div>
+        <div class="bar-row"><div class="bar-name" style="color:var(--blue)">Matt Porcaro + Jesse Cone</div><div class="bar-n" style="color:var(--blue)">5</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--blue)"></div></div><div class="bar-pct">41.7%</div></div>
+        <div class="bar-row"><div class="bar-name" style="color:var(--amber)">Sal Rizzolo</div><div class="bar-n" style="color:var(--amber)">5</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--amber)"></div></div><div class="bar-pct">41.7%</div></div>
+        <div class="bar-row"><div class="bar-name" style="color:var(--green)">Matt Porcaro + Elvis Regis</div><div class="bar-n" style="color:var(--green)">2</div><div class="bar-track"><div class="bar-fill" style="width:40%;background:var(--green)"></div></div><div class="bar-pct">16.7%</div></div>
+        <div class="bar-row" style="opacity:.35"><div class="bar-name">Richard Luxmore</div><div class="bar-n">0</div><div class="bar-track"></div><div class="bar-pct">—</div></div>
+        <div class="bar-row" style="opacity:.35"><div class="bar-name">Felix Diaz</div><div class="bar-n">0</div><div class="bar-track"></div><div class="bar-pct">—</div></div>
+        <div class="bar-row" style="opacity:.35"><div class="bar-name">Theresa Feehan</div><div class="bar-n">0</div><div class="bar-track"></div><div class="bar-pct">—</div></div>
+        <div class="bar-row" style="opacity:.35"><div class="bar-name">Yhma Karimy</div><div class="bar-n">0</div><div class="bar-track"></div><div class="bar-pct">—</div></div>
+        <div class="bar-row" style="opacity:.35"><div class="bar-name">James Codomo</div><div class="bar-n">0</div><div class="bar-track"></div><div class="bar-pct">—</div></div>
+        <div class="bar-row" style="opacity:.35"><div class="bar-name">Nicholas Lisi</div><div class="bar-n">0</div><div class="bar-track"></div><div class="bar-pct">—</div></div>
+      </div>
+      <div class="section">
+        <div class="section-title">Lead Detail — Jul 27–Aug 2</div>
+        <div class="tbl-wrap"><div class="tbl-scroll">
+        <table>
+          <thead><tr><th style="text-align:left">Date</th><th style="text-align:left">Lead Name</th><th style="text-align:left">Credited To</th></tr></thead>
+          <tbody>
+            <tr><td style="text-align:left;color:var(--text3)">Jul 28</td><td style="text-align:left;font-weight:600">Miyako Handon</td><td style="text-align:left;color:var(--blue)">Matt Porcaro + Jesse Cone</td></tr>
+            <tr><td style="text-align:left;color:var(--text3)">Jul 28</td><td style="text-align:left;font-weight:600">Carleak K Gibbons</td><td style="text-align:left;color:var(--blue)">Matt Porcaro + Jesse Cone</td></tr>
+            <tr><td style="text-align:left;color:var(--text3)">Jul 29</td><td style="text-align:left;font-weight:600">Luke Fortuna</td><td style="text-align:left;color:var(--amber)">Sal Rizzolo</td></tr>
+            <tr><td style="text-align:left;color:var(--text3)">Jul 29</td><td style="text-align:left;font-weight:600">Candice Williams</td><td style="text-align:left;color:var(--green)">Matt Porcaro + Elvis Regis</td></tr>
+            <tr><td style="text-align:left;color:var(--text3)">Jul 30</td><td style="text-align:left;font-weight:600">Angelina</td><td style="text-align:left;color:var(--green)">Matt Porcaro + Elvis Regis</td></tr>
+            <tr><td style="text-align:left;color:var(--text3)">Jul 30</td><td style="text-align:left;font-weight:600">jessie ysunza</td><td style="text-align:left;color:var(--blue)">Matt Porcaro + Jesse Cone</td></tr>
+            <tr><td style="text-align:left;color:var(--text3)">Jul 31</td><td style="text-align:left;font-weight:600">Aleha Bartholomew</td><td style="text-align:left;color:var(--blue)">Matt Porcaro + Jesse Cone</td></tr>
+            <tr><td style="text-align:left;color:var(--text3)">Jul 31</td><td style="text-align:left;font-weight:600">Eric Cole</td><td style="text-align:left;color:var(--blue)">Matt Porcaro + Jesse Cone</td></tr>
+            <tr><td style="text-align:left;color:var(--text3)">Jul 31</td><td style="text-align:left;font-weight:600">Ndueljant Coba</td><td style="text-align:left;color:var(--amber)">Sal Rizzolo</td></tr>
+            <tr><td style="text-align:left;color:var(--text3)">Jul 31</td><td style="text-align:left;font-weight:600">Elmer Chavez</td><td style="text-align:left;color:var(--amber)">Sal Rizzolo</td></tr>
+            <tr><td style="text-align:left;color:var(--text3)">Aug 2</td><td style="text-align:left;font-weight:600">Andrew Stengel</td><td style="text-align:left;color:var(--amber)">Sal Rizzolo</td></tr>
+            <tr><td style="text-align:left;color:var(--text3)">Aug 2</td><td style="text-align:left;font-weight:600">Devon &amp; James (Ally Reyes Referral)</td><td style="text-align:left;color:var(--amber)">Sal Rizzolo</td></tr>
+          </tbody>
+        </table>
+        </div></div>
+      </div>
+      <div class="section">
+        <div class="section-title">Flags &amp; Notes</div>
+        <div class="note-strip warn"><strong>6 LOs with zero leads this week:</strong> Richard Luxmore, Felix Diaz, Theresa Feehan, Yhma Karimy, James Codomo, Nicholas Lisi.</div>
+        <div class="note-strip"><strong>Credit rule:</strong> Leads with 203K Way as the Referral Contact are credited to Matt Porcaro + whoever is in the Junior column. All other leads are credited to the creation-log creator, except those entered by Alasia Olivares, which are credited to the L/O.</div>
+        <div class="note-strip"><strong>Note:</strong> Weekly report refreshed daily from the Lead Board. YTD/MTD tabs are current per the daily data pull.</div>
+      </div>
+    
+    <div class="portal-footer">Team Rizzolo · NAF · Data pulled Aug 3, 2026 · <a href="index.html" style="color:var(--blue)">← Full Portal</a></div>
+    </main></div><script>(function(){if(sessionStorage.getItem('tr_auth')==='1'){var g=document.getElementById('gate');if(g)g.style.display='none';}})();
+function chk(){var v=document.getElementById('pw').value;if(v==='Rizzolo'){sessionStorage.setItem('tr_auth','1');document.getElementById('gate').style.display='none';}else{document.getElementById('gerr').textContent='Incorrect password';}}</script></body></html>
