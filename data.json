@@ -1,0 +1,124 @@
+{
+  "pull_date": "Sep 1, 2026",
+  "ytd_range": "Jan 1 – Sep 1, 2026",
+  "months": ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug"],
+  "leads_ytd": 425,
+  "funded_ytd": 97,
+  "volume_ytd": 57018592,
+  "pipeline_value": 21882999,
+  "pipeline_deals": 37,
+  "pull_through": "22.8%",
+  "leads_by_month": [38,18,70,43,50,64,73,69],
+  "funded_by_month": [13,11,7,15,15,9,13,14],
+  "volume_by_month": [8601754,5645419,3737455,8535259,8248471,4986376,8101143,9162715],
+  "pipeline_note": "Active Rolling Pipeline: $21.88M across 37 open deals. Open deals in Limbo, Accepted Offers, Ready for Setup, Loans in Setup, and Prep for Submission, plus the September + October groups. Excludes Closed/Funded, dead, and past funded months.",
+  "credit_note": "Leads with 203K Way as Referral Contact are credited by Junior — Elvis Regis &rarr; <strong>Elvis - 203K Way</strong>, Jesse Cone &rarr; <strong>Jesse - 203K Way</strong>, all other juniors &rarr; <strong>Sal - 203K Way</strong>. Everyone else = creation-log creator, except Alasia entries &rarr; L/O. Lead dates bucketed in America/New_York.",
+  "lead_credit": [
+    {"name":"Sal Rizzolo","color":"#579bfc","m":[16,9,18,21,28,33,32,29],"ytd":186},
+    {"name":"Elvis - 203K Way","color":"#cab641","m":[1,2,22,9,7,13,13,3],"ytd":70},
+    {"name":"Richard Luxmore","color":"#ff642e","m":[12,0,12,4,4,2,3,5],"ytd":42},
+    {"name":"Jesse - 203K Way","color":"#e879b9","m":[0,0,0,0,0,6,10,10],"ytd":26},
+    {"name":"Felix Diaz","color":"#00c875","m":[0,0,0,3,5,5,3,6],"ytd":22},
+    {"name":"Matthew Porcaro","color":"#7b6bd6","m":[0,0,4,2,3,2,4,7],"ytd":22},
+    {"name":"Theresa Feehan","color":"#66ccff","m":[2,0,7,2,1,1,3,2],"ytd":18},
+    {"name":"Sal - 203K Way","color":"#9d50dd","m":[1,1,5,1,0,1,1,4],"ytd":14},
+    {"name":"Yhma Karimy","color":"#1D9E75","m":[2,5,2,1,0,0,0,0],"ytd":10},
+    {"name":"Elvis Regis","color":"#888888","m":[0,0,0,0,2,1,2,2],"ytd":7},
+    {"name":"Rob Scaccia","color":"#666666","m":[3,1,0,0,0,0,0,0],"ytd":4},
+    {"name":"Nicholas Lisi","color":"#777777","m":[1,0,0,0,0,0,1,1],"ytd":3},
+    {"name":"Lead Intake (form)","color":"#555555","m":[0,0,0,0,0,0,1,0],"ytd":1}
+  ],
+  "pipeline_by_lo": [
+    {"name":"Sal Rizzolo","color":"#579bfc","deals":23,"vol":13069999},
+    {"name":"Matthew Porcaro","color":"#7b6bd6","deals":7,"vol":4060750},
+    {"name":"Felix Diaz","color":"#00c875","deals":4,"vol":3210000},
+    {"name":"Theresa Feehan","color":"#66ccff","deals":1,"vol":600000},
+    {"name":"James Codomo","color":"#666666","deals":1,"vol":582250},
+    {"name":"Rob Scaccia","color":"#666666","deals":1,"vol":360000}
+  ],
+  "funded_by_lo": [
+    {"name":"Sal Rizzolo","color":"#579bfc","m":[5,7,7,9,10,6,9,7],"total":60,
+     "v":[3249500,3798817,3737455,5398385,5611221,3193951,5892062,4769160],"vtotal":35650551},
+    {"name":"Richard Luxmore","color":"#ff642e","m":[5,2,0,2,4,2,0,1],"total":16,
+     "v":[3687500,869250,0,845000,2237250,1001125,0,809000],"vtotal":9449125},
+    {"name":"Felix Diaz","color":"#00c875","m":[0,0,0,0,0,1,3,3],"total":7,
+     "v":[0,0,0,0,0,791300,1409081,2237527],"vtotal":4437908},
+    {"name":"Theresa Feehan","color":"#66ccff","m":[2,1,0,3,0,0,0,0],"total":6,
+     "v":[1024564,665000,0,1634874,0,0,0,0],"vtotal":3324438},
+    {"name":"James Codomo","color":"#666666","m":[1,1,0,0,0,0,1,1],"total":4,
+     "v":[640190,312352,0,0,0,0,800000,381900],"vtotal":2134442},
+    {"name":"Matthew Porcaro","color":"#7b6bd6","m":[0,0,0,0,1,0,0,1],"total":2,
+     "v":[0,0,0,0,400000,0,0,535128],"vtotal":935128},
+    {"name":"Yhma Karimy","color":"#1D9E75","m":[0,0,0,1,0,0,0,0],"total":1,
+     "v":[0,0,0,657000,0,0,0,0],"vtotal":657000},
+    {"name":"Rob Scaccia","color":"#666666","m":[0,0,0,0,0,0,0,1],"total":1,
+     "v":[0,0,0,0,0,0,0,430000],"vtotal":430000}
+  ],
+  "pull_through_rows": [
+    {"name":"Richard Luxmore","color":"#ff642e","leads":42,"contract":0,"funded":16,"pct":"38.1%","badge":"badge-gray","status":"Departed"},
+    {"name":"Theresa Feehan","color":"#66ccff","leads":18,"contract":1,"funded":6,"pct":"33.3%","badge":"badge-green","status":"Strong"},
+    {"name":"Sal Rizzolo","color":"#579bfc","leads":186,"contract":23,"funded":60,"pct":"32.3%","badge":"badge-green","status":"Strong"},
+    {"name":"Felix Diaz","color":"#00c875","leads":22,"contract":4,"funded":7,"pct":"31.8%","badge":"badge-green","status":"Strong"},
+    {"name":"Yhma Karimy","color":"#1D9E75","leads":10,"contract":0,"funded":1,"pct":"10.0%","badge":"badge-orange","status":"Low"},
+    {"name":"203K Way Team","color":"#7b6bd6","leads":132,"contract":7,"funded":2,"pct":"1.5%&#9733;","badge":"badge-gray","status":"203K norm"},
+    {"name":"James Codomo","color":"#666666","leads":0,"contract":1,"funded":4,"pct":"&mdash;","badge":"badge-gray","status":"Referral"}
+  ],
+  "pull_through_note": "Pull-through = 2026 funded &divide; YTD credited leads. 203K Way Team groups all 203K-credited leads plus Matt's direct leads (132) against Matt-owned fundings. &#9733; 203K benchmark: 40% lead-to-board / 20% app. James funds via referral (no board leads). Richard Luxmore is no longer with the team; his 2026 fundings are retained in the historical record. Rows do not sum to the team total &mdash; Elvis Regis solo, Rob Scaccia and Nicholas Lisi are omitted (0 funded).",
+  "avg_loan": 587821,
+  "vol_kpis": [
+    {"label":"Sal Rizzolo","var":"--blue","val":"$35.7M","sub":"62.5%"},
+    {"label":"Richard","var":"--orange","val":"$9.4M","sub":"16.6%"},
+    {"label":"Felix","var":"--green","val":"$4.4M","sub":"7.8%"}
+  ],
+  "positives": [
+    "Team funded 97 loans worth $57.02M YTD &mdash; August was the year's best month at 14 loans / $9.16M.",
+    "Three straight months of volume growth: Jun $4.99M &rarr; Jul $8.10M &rarr; Aug $9.16M.",
+    "Felix Diaz has ramped hard &mdash; 7 funded YTD ($4.44M), 6 of them since July; pull-through now 31.8%.",
+    "Sal drives 186 credited leads and $35.65M funded across 60 loans.",
+    "203K Way is still the biggest single channel &mdash; 110 YTD leads credited to the 203K juniors (Elvis 70, Jesse 26, other 14).",
+    "August was the second-best lead month of the year at 69, just behind July's 73."
+  ],
+  "watching": [
+    "October has just 1 deal ($0.70M) on the board &mdash; by far the thinnest forward month of the year.",
+    "September carries 19 of the 37 open deals; 7 appraisals and 8 CDs are still outstanding.",
+    "203K Way pull-through stays low (1.5%) &mdash; expected for that channel, but worth tracking against the 40/20 benchmark.",
+    "Yhma stays cold &mdash; 0 leads since April, 1 funded YTD.",
+    "The Lock-status column was removed from the Master Pipeline board, so lock tracking is no longer reportable.",
+    "New tracking columns (Referral Source, App Date, Purchase/Refi, Fall-Through) still unpopulated board-wide."
+  ],
+  "mtd": {
+    "title": "September MTD",
+    "sub": "Sep 1, 2026 &middot; first day of September &middot; August final for context",
+    "kpis": [
+      {"label":"Sep MTD Leads","var":"--blue","val":"0","sub":"Sep 1"},
+      {"label":"August Final Leads","var":"--green","val":"69","sub":"2nd best of 2026"},
+      {"label":"August Funded","var":"--purple","val":"14","sub":"$9.16M &middot; best month"},
+      {"label":"Sep Funded","var":"--amber","val":"0","sub":"19 scheduled"}
+    ],
+    "note": "<strong>August closed as the best month of 2026:</strong> 69 leads and 14 fundings for $9.16M. September has 19 deals scheduled to close worth $11.05M &mdash; no leads logged yet on Sep 1.",
+    "days_in_month": 30,
+    "daily": [0],
+    "pace": [
+      {"m":"September 2026","leads":0,"days":1,"per":"0.00","ctx":"just started","hl":true},
+      {"m":"August 2026","leads":69,"days":31,"per":"2.23","ctx":"2nd best month","hl":true},
+      {"m":"July 2026","leads":73,"days":31,"per":"2.35","ctx":"strongest of the year","hl":true},
+      {"m":"March 2026","leads":70,"days":31,"per":"2.26","ctx":"prior peak","hl":false}
+    ]
+  },
+  "weekly": {
+    "label": "Aug 31–Sep 1",
+    "leads": 3,
+    "active_sources": 2,
+    "zero_count": 6,
+    "zero_names": "Felix Diaz, Theresa Feehan, Yhma Karimy, James Codomo, Matthew Porcaro, Nicholas Lisi",
+    "buckets": [
+      {"name":"Sal Rizzolo","color":"#579bfc","n":2},
+      {"name":"Elvis Regis","color":"#888888","n":1}
+    ],
+    "detail": [
+      {"d":"Aug 31","name":"Teousla (Lexie Roth Referral)","credit":"Sal Rizzolo"},
+      {"d":"Aug 31","name":"Jaime","credit":"Sal Rizzolo"},
+      {"d":"Aug 31","name":"Edmond Peasah","credit":"Elvis Regis"}
+    ]
+  }
+}
