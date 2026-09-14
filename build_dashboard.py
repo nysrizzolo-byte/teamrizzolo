@@ -172,15 +172,15 @@ def pane_weekly():
     rows = "".join(
         f'<tr><td style="text-align:left">{r["d"]}</td><td style="text-align:left">{r["name"]}</td>'
         f'<td style="text-align:left">{r["credit"]}</td></tr>' for r in w["detail"]) \
-        or '<tr><td colspan="3" style="text-align:left;color:var(--text3)">No leads logged yet this week.</td></tr>'
+        or '<tr><td colspan="3" style="text-align:left;color:var(--text3)">No leads logged in the last 7 days.</td></tr>'
     return f'''<div class="pane" id="pane-weekly">
       <div class="page-header">
         <div class="page-eyebrow">Current Period</div>
         <div class="page-title">Weekly Report</div>
-        <div class="page-sub">{w["label"]}, 2026 &middot; this week so far &middot; refreshed daily</div>
+        <div class="page-sub">{w["label"]}, 2026 &middot; rolling last 7 days &middot; refreshed daily</div>
       </div>
       <div class="kpi-grid">
-        <div class="kpi"><div class="kpi-label">Week Leads</div><div class="kpi-value" style="color:var(--blue)">{w["leads"]}</div><div class="kpi-sub">{w["label"]}</div></div>
+        <div class="kpi"><div class="kpi-label">Leads &middot; Last 7 Days</div><div class="kpi-value" style="color:var(--blue)">{w["leads"]}</div><div class="kpi-sub">{w["label"]}</div></div>
         <div class="kpi"><div class="kpi-label">Active Sources</div><div class="kpi-value" style="color:var(--green)">{w["active_sources"]}</div></div>
         <div class="kpi"><div class="kpi-label">Zero-Lead LOs</div><div class="kpi-value" style="color:var(--red)">{w["zero_count"]}</div><div class="kpi-sub">flagged</div></div>
       </div>
@@ -197,7 +197,7 @@ def pane_weekly():
             {rows}
           </tbody>
         </table></div></div>
-        <p style="font-size:10px;color:var(--text3);margin-top:8px">No leads this week from: {w["zero_names"]}.</p>
+        <p style="font-size:10px;color:var(--text3);margin-top:8px">No leads in the last 7 days from: {w["zero_names"]}.</p>
       </div>
     </div>
 '''
