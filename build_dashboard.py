@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
 """Rebuild the Team Rizzolo metrics dashboard (index.html) from data.json.
 
-Splices every content pane, the nav labels, the sidebar/portal footers and the
-Chart.js data arrays. The CSS, the password gate and the showPane() JS in
-index.html are treated as an untouched template shell.
+Splices every content pane, the Current Period nav, the sidebar/portal footers
+and the Chart.js data arrays. The CSS and the showPane() JS in index.html are
+treated as an untouched template shell.
+
+Current-period panes: Last 7 Days (pane-weekly, rolling), Week to Date
+(pane-wtd, Monday-to-today), Month to Date (pane-mtd). Year to Date is the
+Overview pane.
 
 Usage:  python3 build_dashboard.py [data.json] [index.html]
 """
@@ -15,6 +19,8 @@ d = json.load(open(DATA))
 html = open(PAGE, encoding="utf-8").read()
 
 M = d["months"]
+FULL = {"Jan": "January", "Feb": "February", "Mar": "March", "Apr": "April", "May": "May", "Jun": "June",
+        "Jul": "July", "Aug": "August", "Sep": "September", "Oct": "October", "Nov": "November", "Dec": "December"}
 def usd(n):
     return "$%.2fM" % (n / 1_000_000)
 def usd1(n):
@@ -23,8 +29,23 @@ def cell(v):
     return "&mdash;" if not v else v
 def vcell(v):
     return "&mdash;" if not v else "$%.1fM" % (v / 1_000_000)
+MUTED = '<p style="font-size:12px;color:var(--text3);margin:4px 0">%s</p>'
 
-# ---------------------------------------------------------------- OVERVIEW
+# ---------------------------------------------------------------- OVERVIEW (= YTD)
+def lead_chart_note():
+    if d.get("current_month_partial"):
+        return f"Jan&ndash;{M[-1]} 2026 &middot; {M[-1]} is month-to-date"
+    return f"Jan&ndash;{M[-1]} 2026 &middot; complete months"
+
+def period_kpis():
+    tiles = [("Last 7 Days", d["weekly"]["leads"], d["weekly"]["label"], "--blue"),
+             ("Week to Date", d["wtd"]["leads"], d["wtd"]["label"], "--teal"),
+             ("Month to Date", d["mtd"]["leads"], d["mtd"]["range"], "--amber"),
+             ("Year to Date", d["leads_ytd"], d["ytd_range"].replace(", 2026", ""), "--green")]
+    return "".join(
+        f'<div class="kpi"><div class="kpi-label">{t}</div><div class="kpi-value" style="color:var({v})">{n}</div>'
+        f'<div class="kpi-sub">{s}</div></div>' for t, n, s, v in tiles)
+
 def pane_overview():
     lc = d["lead_credit"]
     mx = max(x["ytd"] for x in lc)
@@ -38,15 +59,16 @@ def pane_overview():
     return f'''    <div class="pane active" id="pane-overview">
       <div class="page-header"><div class="page-eyebrow">2026 Year-to-Date</div><div class="page-title">Team Overview</div><div class="page-sub">{d["ytd_range"]} &middot; Leads credited per 203K-Way formula &middot; Fundings by closing date to L/O</div></div>
       <div class="kpi-grid">
-        <div class="kpi"><div class="kpi-label">YTD Leads</div><div class="kpi-value" style="color:var(--blue)">{d["leads_ytd"]}</div><div class="kpi-sub">Jan&ndash;Aug</div></div>
+        <div class="kpi"><div class="kpi-label">YTD Leads</div><div class="kpi-value" style="color:var(--blue)">{d["leads_ytd"]}</div><div class="kpi-sub">Jan&ndash;{M[-1]}</div></div>
         <div class="kpi"><div class="kpi-label">Active Pipeline</div><div class="kpi-value" style="color:var(--amber)">{d["pipeline_deals"]}</div><div class="kpi-sub">open deals</div></div>
         <div class="kpi"><div class="kpi-label">Closed / Funded</div><div class="kpi-value" style="color:var(--green)">{d["funded_ytd"]}</div><div class="kpi-sub">YTD loans</div></div>
         <div class="kpi"><div class="kpi-label">Funded Volume</div><div class="kpi-value" style="color:var(--purple)">{usd1(d["volume_ytd"])}</div><div class="kpi-sub">YTD</div></div>
         <div class="kpi"><div class="kpi-label">Pull-Through</div><div class="kpi-value" style="color:var(--teal)">{d["pull_through"]}</div><div class="kpi-sub">{d["funded_ytd"]} / {d["leads_ytd"]} leads</div></div>
       </div>
+      <div class="section"><div class="section-title">Lead Intake by Period &middot; {d["pull_date"]}</div><div class="kpi-grid">{period_kpis()}</div></div>
       <div class="note-strip good"><strong>{d["pipeline_note"]}</strong></div>
       <div class="note-strip"><strong>Credit rule:</strong> {d["credit_note"]}</div>
-      <div class="section"><div class="section-title">Monthly Team Lead Intake</div><div class="chart-card"><div style="position:relative;width:100%;height:200px"><canvas id="teamChart"></canvas></div><div class="chart-note">Jan&ndash;Aug 2026 &middot; complete months</div></div></div>
+      <div class="section"><div class="section-title">Monthly Team Lead Intake</div><div class="chart-card"><div style="position:relative;width:100%;height:200px"><canvas id="teamChart"></canvas></div><div class="chart-note">{lead_chart_note()}</div></div></div>
       <div class="section"><div class="section-title">YTD Leads by Credit</div>{bars}</div>
       <div class="section"><div class="section-title">Insights &middot; {d["pull_date"]}</div>
         <div class="insight-grid">
@@ -128,6 +150,12 @@ def pane_lp():
 '''
 
 # ---------------------------------------------------------------- VOLUME
+def vol_note():
+    mv = d["volume_by_month"]
+    closed = mv[:-1] if d.get("current_month_partial") and len(mv) > 1 else mv
+    i = closed.index(max(closed))
+    return f"{FULL[M[i]]} is the year's best month &mdash; {d['funded_by_month'][i]} loans, {usd(mv[i])}"
+
 def pane_vol():
     mv = d["volume_by_month"]; mx = max(mv)
     bars = "".join(
@@ -151,7 +179,7 @@ def pane_vol():
         {kp}
         <div class="kpi"><div class="kpi-label">Avg / Loan</div><div class="kpi-value" style="color:var(--teal)">${d["avg_loan"]//1000}K</div></div>
       </div>
-      <div class="section"><div class="section-title">Monthly Funded Volume (Team)</div><div class="chart-card">{bars}<div class="chart-note">August is the year's best month &mdash; 14 loans, $9.16M</div></div></div>
+      <div class="section"><div class="section-title">Monthly Funded Volume (Team)</div><div class="chart-card">{bars}<div class="chart-note">{vol_note()}</div></div></div>
       <div class="section"><div class="section-title">Volume by Loan Officer</div>
         <div class="tbl-wrap"><div class="tbl-scroll"><table>
           <thead><tr><th>LO</th>{th}<th>YTD Total</th><th>Loans</th></tr></thead>
@@ -161,26 +189,29 @@ def pane_vol():
     </div>
 '''
 
-# ---------------------------------------------------------------- WEEKLY
-def pane_weekly():
-    w = d["weekly"]; mx = max([b["n"] for b in w["buckets"]] + [1])
+# ---------------------------------------------------------------- LAST 7 DAYS / WEEK TO DATE
+def period_pane(pid, w, title, window, kpi_label, empty_msg, zero_lead):
+    mx = max([b["n"] for b in w["buckets"]] + [1])
     bars = "".join(
         f'<div class="bar-row"><div class="bar-name" style="color:{b["color"]}">{b["name"]}</div>'
         f'<div class="bar-n" style="color:{b["color"]}">{b["n"]}</div>'
         f'<div class="bar-track"><div class="bar-fill" style="width:{b["n"]/mx*100:.1f}%;background:{b["color"]}"></div></div>'
-        f'<div class="bar-pct">{b["n"]/max(w["leads"],1)*100:.0f}%</div></div>' for b in w["buckets"])
+        f'<div class="bar-pct">{b["n"]/max(w["leads"],1)*100:.0f}%</div></div>' for b in w["buckets"]) \
+        or MUTED % empty_msg
     rows = "".join(
         f'<tr><td style="text-align:left">{r["d"]}</td><td style="text-align:left">{r["name"]}</td>'
         f'<td style="text-align:left">{r["credit"]}</td></tr>' for r in w["detail"]) \
-        or '<tr><td colspan="3" style="text-align:left;color:var(--text3)">No leads logged in the last 7 days.</td></tr>'
-    return f'''<div class="pane" id="pane-weekly">
+        or f'<tr><td colspan="3" style="text-align:left;color:var(--text3)">{empty_msg}</td></tr>'
+    zero = (f'<p style="font-size:10px;color:var(--text3);margin-top:8px">{zero_lead}: {w["zero_names"]}.</p>'
+            if w["zero_names"] else "")
+    return f'''    <div class="pane" id="pane-{pid}">
       <div class="page-header">
         <div class="page-eyebrow">Current Period</div>
-        <div class="page-title">Weekly Report</div>
-        <div class="page-sub">{w["label"]}, 2026 &middot; rolling last 7 days &middot; refreshed daily</div>
+        <div class="page-title">{title}</div>
+        <div class="page-sub">{w["label"]}, 2026 &middot; {window} &middot; refreshed daily</div>
       </div>
       <div class="kpi-grid">
-        <div class="kpi"><div class="kpi-label">Leads &middot; Last 7 Days</div><div class="kpi-value" style="color:var(--blue)">{w["leads"]}</div><div class="kpi-sub">{w["label"]}</div></div>
+        <div class="kpi"><div class="kpi-label">{kpi_label}</div><div class="kpi-value" style="color:var(--blue)">{w["leads"]}</div><div class="kpi-sub">{w["label"]}</div></div>
         <div class="kpi"><div class="kpi-label">Active Sources</div><div class="kpi-value" style="color:var(--green)">{w["active_sources"]}</div></div>
         <div class="kpi"><div class="kpi-label">Zero-Lead LOs</div><div class="kpi-value" style="color:var(--red)">{w["zero_count"]}</div><div class="kpi-sub">flagged</div></div>
       </div>
@@ -197,10 +228,20 @@ def pane_weekly():
             {rows}
           </tbody>
         </table></div></div>
-        <p style="font-size:10px;color:var(--text3);margin-top:8px">No leads in the last 7 days from: {w["zero_names"]}.</p>
+        {zero}
       </div>
     </div>
 '''
+
+def pane_weekly():
+    return period_pane("weekly", d["weekly"], "Last 7 Days", "rolling last 7 days",
+                       "Leads &middot; Last 7 Days", "No leads logged in the last 7 days.",
+                       "No leads in the last 7 days from")
+
+def pane_wtd():
+    return period_pane("wtd", d["wtd"], "Week to Date", "Monday through today &middot; resets each Monday",
+                       "Leads &middot; Week to Date", "No leads logged yet this week.",
+                       "No leads yet this week from")
 
 # ---------------------------------------------------------------- MTD
 def pane_mtd():
@@ -224,7 +265,7 @@ def pane_mtd():
         {kp}
       </div>
       <div class="note-strip">{m["note"]}</div>
-      <div class="section"><div class="section-title">Daily Lead Intake &mdash; September 2026</div><div class="chart-card"><div class="daily-wrap" id="dailyChart"></div><div class="chart-note">Sep 1&ndash;{m["days_in_month"]} &middot; each bar = 1 day</div></div></div>
+      <div class="section"><div class="section-title">Daily Lead Intake &mdash; {FULL[m["mon"]]} 2026</div><div class="chart-card"><div class="daily-wrap" id="dailyChart"></div><div class="chart-note">{m["mon"]} 1&ndash;{m["days_in_month"]} &middot; each bar = 1 day</div></div></div>
       <div class="section"><div class="section-title">Pace vs Prior Months</div>
         <div class="tbl-wrap"><div class="tbl-scroll"><table>
           <thead><tr><th style="text-align:left">Month</th><th>Leads</th><th>Days</th><th>Per Day</th><th style="text-align:left">Context</th></tr></thead>
@@ -236,28 +277,32 @@ def pane_mtd():
 '''
 
 # ---------------------------------------------------------------- SPLICE
-starts = ['<div class="pane active" id="pane-overview">', '<div class="pane" id="pane-bylo">',
-          '<div class="pane" id="pane-lp">', '<div class="pane" id="pane-vol">',
-          '<div class="pane" id="pane-weekly">', '<div class="pane" id="pane-mtd">',
-          '<div class="portal-footer">']
-idx = []
-for s in starts:
-    i = html.find(s)
-    if i < 0:
-        sys.exit("FATAL: marker not found: " + s)
-    idx.append(html.rfind("\n", 0, i) + 1)
-if idx != sorted(idx):
-    sys.exit("FATAL: panes out of expected order")
-
+# Everything from the Overview pane up to the portal footer is regenerated wholesale.
+first = html.find('<div class="pane active" id="pane-overview">')
+last = html.find('<div class="portal-footer">')
+if first < 0 or last < 0 or last < first:
+    sys.exit("FATAL: pane-overview / portal-footer markers not found or out of order")
+a = html.rfind("\n", 0, first) + 1
+b = html.rfind("\n", 0, last) + 1
 body = pane_overview() + "\n" + pane_bylo() + "\n" + pane_lp() + "\n" + pane_vol() + "\n" \
-     + pane_weekly() + "\n" + pane_mtd() + "\n"
-html = html[:idx[0]] + body + html[idx[6]:]
+     + pane_weekly() + "\n" + pane_wtd() + "\n" + pane_mtd() + "\n"
+html = html[:a] + body + html[b:]
 
-# nav labels
-html = re.sub(r"(showPane\('weekly',this\)\"[^>]*><span[^>]*></span>)Weekly \([^)]*\)",
-              r"\1Weekly (" + d["weekly"]["label"] + ")", html)
-html = re.sub(r"(showPane\('mtd',this\)\"[^>]*><span[^>]*></span>)MTD \([^)]*\)",
-              r"\1MTD (September 2026)", html)
+# Current Period nav: regenerated between its section header and the Personal section.
+NAV_START = '<div class="nav-section">Current Period</div>'
+NAV_END = '<div class="nav-section">Personal</div>'
+s, e = html.find(NAV_START), html.find(NAV_END)
+if s < 0 or e < 0 or e < s:
+    sys.exit("FATAL: Current Period nav markers not found")
+def nav(pid, dot, text):
+    return (f'    <div class="nav-item" onclick="showPane(\'{pid}\',this)">'
+            f'<span class="nav-dot" style="background:{dot}"></span>{text}</div>\n')
+navblock = ("    " + NAV_START + "\n"
+            + nav("weekly", "#cab641", f'Last 7 Days ({d["weekly"]["label"]})')
+            + nav("wtd", "#66ccff", f'Week to Date ({d["wtd"]["label"]})')
+            + nav("mtd", "#ff642e", f'Month to Date ({FULL[d["mtd"]["mon"]]})')
+            + nav("overview", "#00c875", "Year to Date (2026)"))
+html = html[:html.rfind("\n", 0, s) + 1] + navblock + html[html.rfind("\n", 0, e) + 1:]
 
 # sidebar footer
 html = re.sub(r'<div class="run-date">.*?</div>',
@@ -274,10 +319,11 @@ html = re.sub(r'<div class="portal-footer">.*?</div>',
 
 # chart data
 labels = json.dumps(M)
+last_bar = "'#3f5f8a'" if d.get("current_month_partial") else "'#00c875'"
 html = re.sub(r"(new Chart\(document\.getElementById\('teamChart'\).*?labels:)\[[^\]]*\](,datasets:\[\{data:)\[[^\]]*\]",
               lambda m: m.group(1) + labels + m.group(2) + json.dumps(d["leads_by_month"]), html, flags=re.S)
 html = re.sub(r"(backgroundColor:\[)[^\]]*(\],borderRadius:5)",
-              lambda m: m.group(1) + ",".join(["'#579bfc'"] * (len(M) - 1) + ["'#00c875'"]) + m.group(2), html)
+              lambda m: m.group(1) + ",".join(["'#579bfc'"] * (len(M) - 1) + [last_bar]) + m.group(2), html)
 html = re.sub(r"(getElementById\('lpChart'\).*?labels:)\[[^\]]*\](.*?label:'Leads',data:)\[[^\]]*\](.*?label:'Funded',data:)\[[^\]]*\]",
               lambda m: m.group(1) + labels + m.group(2) + json.dumps(d["leads_by_month"])
                       + m.group(3) + json.dumps(d["funded_by_month"]), html, flags=re.S)
