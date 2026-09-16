@@ -1,6 +1,6 @@
 {
- "pull_date": "Sep 15, 2026",
- "ytd_range": "Jan 1 – Sep 15, 2026",
+ "pull_date": "Sep 16, 2026",
+ "ytd_range": "Jan 1 – Sep 16, 2026",
  "months": [
   "Jan",
   "Feb",
@@ -13,12 +13,12 @@
   "Sep"
  ],
  "current_month_partial": true,
- "leads_ytd": 439,
- "funded_ytd": 100,
- "volume_ytd": 58601842,
- "pipeline_value": 21023974,
- "pipeline_deals": 36,
- "pull_through": "22.8%",
+ "leads_ytd": 441,
+ "funded_ytd": 102,
+ "volume_ytd": 59498342,
+ "pipeline_value": 20467474,
+ "pipeline_deals": 35,
+ "pull_through": "23.1%",
  "leads_by_month": [
   38,
   18,
@@ -27,8 +27,8 @@
   49,
   64,
   72,
-  68,
-  17
+  66,
+  21
  ],
  "funded_by_month": [
   13,
@@ -39,7 +39,7 @@
   9,
   13,
   14,
-  3
+  5
  ],
  "volume_by_month": [
   8601754,
@@ -50,9 +50,9 @@
   4986376,
   8101143,
   9162715,
-  1583250
+  2479750
  ],
- "pipeline_note": "Active Rolling Pipeline: $21.02M across 36 open deals. Open deals in Limbo, Accepted Offers, Ready for Setup, Loans in Setup, and Prep for Submission, plus the September + October groups. Excludes Closed/Funded, dead, and past funded months.",
+ "pipeline_note": "Active Rolling Pipeline: $20.47M across 35 open deals. Open deals in Limbo, Accepted Offers, Ready for Setup, Loans in Setup, and Prep for Submission, plus the September + October groups. Excludes Closed/Funded, dead, and past funded months.",
  "credit_note": "Leads with 203K Way as Referral Contact are credited by Junior — Elvis Regis &rarr; <strong>Elvis - 203K Way</strong>, Jesse Cone &rarr; <strong>Jesse - 203K Way</strong>, all other juniors &rarr; <strong>Sal - 203K Way</strong>. Everyone else = creation-log creator, except Alasia entries &rarr; L/O. Lead dates bucketed in America/New_York.",
  "lead_credit": [
   {
@@ -66,10 +66,10 @@
     28,
     33,
     32,
-    29,
-    11
+    28,
+    15
    ],
-   "ytd": 197
+   "ytd": 200
   },
   {
    "name": "Elvis - 203K Way",
@@ -130,10 +130,10 @@
     3,
     2,
     4,
-    7,
+    6,
     3
    ],
-   "ytd": 25
+   "ytd": 24
   },
   {
    "name": "Felix Diaz",
@@ -147,9 +147,9 @@
     5,
     3,
     6,
-    1
+    2
    ],
-   "ytd": 22
+   "ytd": 23
   },
   {
    "name": "Theresa Feehan",
@@ -163,9 +163,9 @@
     1,
     3,
     2,
-    1
+    0
    ],
-   "ytd": 19
+   "ytd": 18
   },
   {
    "name": "Sal - 203K Way",
@@ -268,8 +268,8 @@
   {
    "name": "Sal Rizzolo",
    "color": "#579bfc",
-   "deals": 19,
-   "vol": 10736999
+   "deals": 18,
+   "vol": 10730499
   },
   {
    "name": "Felix Diaz",
@@ -280,8 +280,8 @@
   {
    "name": "Matthew Porcaro",
    "color": "#7b6bd6",
-   "deals": 7,
-   "vol": 4008750
+   "deals": 6,
+   "vol": 3458750
   },
   {
    "name": "Elvis Regis",
@@ -292,7 +292,7 @@
   {
    "name": "Theresa Feehan",
    "color": "#66ccff",
-   "deals": 1,
+   "deals": 2,
    "vol": 600000
   },
   {
@@ -321,9 +321,9 @@
     7,
     9,
     7,
-    2
+    4
    ],
-   "total": 63,
+   "total": 65,
    "v": [
     3249500,
     3798817,
@@ -333,9 +333,9 @@
     3985251,
     5892062,
     4769160,
-    1256250
+    2152750
    ],
-   "vtotal": 37698101
+   "vtotal": 38594601
   },
   {
    "name": "Richard Luxmore",
@@ -548,30 +548,30 @@
   {
    "name": "Sal Rizzolo",
    "color": "#579bfc",
-   "leads": 197,
-   "contract": 19,
-   "funded": 63,
-   "pct": "32.0%",
+   "leads": 200,
+   "contract": 18,
+   "funded": 65,
+   "pct": "32.5%",
    "badge": "badge-green",
    "status": "Strong"
   },
   {
    "name": "Theresa Feehan",
    "color": "#66ccff",
-   "leads": 19,
-   "contract": 1,
+   "leads": 18,
+   "contract": 2,
    "funded": 6,
-   "pct": "31.6%",
+   "pct": "33.3%",
    "badge": "badge-green",
    "status": "Strong"
   },
   {
    "name": "Felix Diaz",
    "color": "#00c875",
-   "leads": 22,
+   "leads": 23,
    "contract": 6,
    "funded": 6,
-   "pct": "27.3%",
+   "pct": "26.1%",
    "badge": "badge-green",
    "status": "Strong"
   },
@@ -588,8 +588,8 @@
   {
    "name": "203K Way Team",
    "color": "#7b6bd6",
-   "leads": 135,
-   "contract": 7,
+   "leads": 134,
+   "contract": 6,
    "funded": 3,
    "pct": "2.2%&#9733;",
    "badge": "badge-gray",
@@ -606,77 +606,77 @@
    "status": "Referral"
   }
  ],
- "pull_through_note": "Pull-through = 2026 funded &divide; YTD credited leads. 203K Way Team groups all 203K-credited leads plus Matt's direct leads (135) against Matt-owned fundings. &#9733; 203K benchmark: 40% lead-to-board / 20% app. James funds via referral (no board leads). Richard Luxmore is no longer with the team; his 2026 fundings are retained in the historical record. Rows do not sum to the team total &mdash; Elvis Regis solo (1 open deal), Rob Scaccia and Nicholas Lisi are omitted (0 funded).",
- "avg_loan": 586018,
+ "pull_through_note": "Pull-through = 2026 funded &divide; YTD credited leads. 203K Way Team groups all 203K-credited leads plus Matt's direct leads (134) against Matt-owned fundings. &#9733; 203K benchmark: 40% lead-to-board / 20% app. James funds via referral (no board leads). Richard Luxmore is no longer with the team; his 2026 fundings are retained in the historical record. Rows do not sum to the team total &mdash; Elvis Regis solo (1 open deal), Rob Scaccia and Nicholas Lisi are omitted (0 funded).",
+ "avg_loan": 583317,
  "vol_kpis": [
   {
    "label": "Sal Rizzolo",
    "var": "--blue",
-   "val": "$37.7M",
-   "sub": "64.3%"
+   "val": "$38.6M",
+   "sub": "64.9%"
   },
   {
    "label": "Richard",
    "var": "--orange",
    "val": "$9.4M",
-   "sub": "16.1%"
+   "sub": "15.9%"
   },
   {
    "label": "Felix",
    "var": "--green",
    "val": "$3.6M",
-   "sub": "6.2%"
+   "sub": "6.1%"
   }
  ],
  "positives": [
-  "Team has funded 100 loans worth $58.60M YTD &mdash; crossed the 100-loan mark on Sep 2.",
-  "Three straight months of volume growth: Jun $4.99M &rarr; Jul $8.10M &rarr; Aug $9.16M, the year's best month at 14 loans.",
-  "October is filling fast &mdash; 15 open deals now dated for October ($9.09M), up from a single deal two weeks ago.",
-  "Sal drives 197 credited leads and $37.70M funded across 63 loans &mdash; 64% of team volume.",
-  "Matt Porcaro already has 3 September leads, after 7 in August &mdash; his best month of the year.",
+  "Team has funded 102 loans worth $59.50M YTD &mdash; Dumlao and Martinez were marked funded since the last pull.",
+  "September has 5 fundings ($2.48M) through the 16th, with 4 more scheduled to close Sep 17&ndash;25 (Paulino, Schierlitz, Devarice, McDevitt &mdash; $3.08M).",
+  "October keeps building &mdash; 18 open deals are now dated for October ($10.40M), up from 15 ($9.09M) yesterday.",
+  "Sal drives 200 credited leads and $38.59M funded across 65 loans &mdash; 65% of team volume; 4 new leads on Sep 15 alone.",
+  "Lead intake picked up this week: 8 leads in the last 7 days and 7 since Monday, up from 5 at the last pull.",
   "203K Way is still the biggest single channel &mdash; 110 YTD leads credited to the 203K juniors (Elvis 68, Jesse 27, other 15)."
  ],
  "watching": [
-  "Lead intake has slowed: 17 September leads through the 15th (1.13/day) vs 2.19/day in August &mdash; and 7 of them came on one day (Sep 4).",
+  "September lead pace is still soft: 21 leads through the 16th (1.31/day) vs 2.13/day in August &mdash; and 7 of them came on one day (Sep 4).",
   "203K Way has gone quiet &mdash; 1 lead in September (Sep 1) vs 17 in August.",
-  "4 open deals are past their closing date but not marked funded &mdash; Miles (9/11), Dumlao (9/12), Martinez and Schierlitz (9/14). Update the stage if they closed.",
-  "7 files still sit at NEED SETUP across Limbo and Accepted Offers; Santos (Felix) has no loan amount.",
+  "Miles ($675K, Sal) is past its 9/11 closing date and still at Subbed for Clear &mdash; update the stage if it closed.",
+  "7 files still sit at NEED SETUP across Limbo, Accepted Offers and Ready for Setup; Santos (Felix) and Modica (Theresa) have no loan amount.",
   "Paulino ($650K, closing 9/17) still lists departed Richard Luxmore as co-owner &mdash; credited to Matt.",
-  "Yhma stays cold &mdash; 0 leads since April, 1 funded YTD."
+  "Lead counts dipped where leads left the Lead Board: Theresa's Modica lead (Sep 13) is now a pipeline file, and August fell 68 &rarr; 66. Also, Anthony Sanabria (Felix) appears twice &mdash; Sep 9 and again Sep 16 &mdash; likely a duplicate."
  ],
  "mtd": {
   "title": "September MTD",
-  "leads": 17,
-  "range": "Sep 1–15",
+  "leads": 21,
+  "range": "Sep 1–16",
   "mon": "Sep",
-  "sub": "Sep 1–15, 2026 &middot; 15 of 30 days &middot; August final for context",
+  "sub": "Sep 1–16, 2026 &middot; 16 of 30 days &middot; August final for context",
   "kpis": [
    {
     "label": "Sep MTD Leads",
     "var": "--blue",
-    "val": "17",
-    "sub": "Sep 1–15 &middot; 1.13/day"
+    "val": "21",
+    "sub": "Sep 1–16 &middot; 1.31/day"
    },
    {
     "label": "August Final Leads",
     "var": "--green",
-    "val": "68",
+    "val": "66",
     "sub": "3rd best of 2026"
    },
    {
     "label": "Sep Funded",
     "var": "--purple",
-    "val": "3",
-    "sub": "$1.58M so far"
+    "val": "5",
+    "sub": "$2.48M so far"
    },
    {
     "label": "Sep Open Deals",
     "var": "--amber",
-    "val": "14",
-    "sub": "$8.16M in the Sep group"
+    "val": "10",
+    "sub": "$6.61M in the Sep group"
    }
   ],
-  "note": "<strong>September is running at about half of August's lead pace:</strong> 17 leads in 15 days (1.13/day) vs 2.19/day in August. On fundings, 3 loans ($1.58M) have closed and 14 more ($8.16M) are open in the September group &mdash; 4 of them are past their closing date and need a stage update.",
+  "note": "<strong>September is running at about 62% of August's lead pace:</strong> 21 leads in 16 days (1.31/day) vs 2.13/day in August. On fundings, 5 loans ($2.48M) have closed and 10 more ($6.61M) are open in the September group &mdash; 4 of them are scheduled for Sep 17&ndash;25, and Miles (9/11) is past its closing date.",
   "days_in_month": 30,
   "daily": [
    1,
@@ -691,24 +691,25 @@
    0,
    0,
    1,
-   1,
+   0,
    2,
-   0
+   4,
+   1
   ],
   "pace": [
    {
     "m": "September 2026",
-    "leads": 17,
-    "days": 15,
-    "per": "1.13",
+    "leads": 21,
+    "days": 16,
+    "per": "1.31",
     "ctx": "month-to-date",
     "hl": true
    },
    {
     "m": "August 2026",
-    "leads": 68,
+    "leads": 66,
     "days": 31,
-    "per": "2.19",
+    "per": "2.13",
     "ctx": "3rd best month",
     "hl": true
    },
@@ -731,21 +732,16 @@
   ]
  },
  "weekly": {
-  "label": "Sep 9–Sep 15",
-  "leads": 5,
-  "active_sources": 4,
-  "zero_count": 4,
-  "zero_names": "Yhma Karimy, James Codomo, Elvis Regis, Nicholas Lisi",
+  "label": "Sep 10–Sep 16",
+  "leads": 8,
+  "active_sources": 3,
+  "zero_count": 5,
+  "zero_names": "Theresa Feehan, Yhma Karimy, James Codomo, Elvis Regis, Nicholas Lisi",
   "buckets": [
    {
     "name": "Sal Rizzolo",
     "color": "#579bfc",
-    "n": 2
-   },
-   {
-    "name": "Felix Diaz",
-    "color": "#00c875",
-    "n": 1
+    "n": 6
    },
    {
     "name": "Matthew Porcaro",
@@ -753,26 +749,21 @@
     "n": 1
    },
    {
-    "name": "Theresa Feehan",
-    "color": "#66ccff",
+    "name": "Felix Diaz",
+    "color": "#00c875",
     "n": 1
    }
   ],
   "detail": [
-   {
-    "d": "Sep 9",
-    "name": "Anthony Sanabria",
-    "credit": "Felix Diaz"
-   },
    {
     "d": "Sep 12",
     "name": "Harjot Singh",
     "credit": "Sal Rizzolo"
    },
    {
-    "d": "Sep 13",
-    "name": "Marialaina Modica",
-    "credit": "Theresa Feehan"
+    "d": "Sep 14",
+    "name": "Jean Augustin",
+    "credit": "Sal Rizzolo"
    },
    {
     "d": "Sep 14",
@@ -780,40 +771,90 @@
     "credit": "Matthew Porcaro"
    },
    {
-    "d": "Sep 14",
-    "name": "Jean Augustin",
+    "d": "Sep 15",
+    "name": "Saul Carbajal (Refi / Debt Consolidation)",
     "credit": "Sal Rizzolo"
+   },
+   {
+    "d": "Sep 15",
+    "name": "Luis Rojos",
+    "credit": "Sal Rizzolo"
+   },
+   {
+    "d": "Sep 15",
+    "name": "Apping - Daughter Buyout (Gift of Equity)",
+    "credit": "Sal Rizzolo"
+   },
+   {
+    "d": "Sep 15",
+    "name": "Semia Jackson & Isaiah Jones",
+    "credit": "Sal Rizzolo"
+   },
+   {
+    "d": "Sep 16",
+    "name": "Anthony Sanabria",
+    "credit": "Felix Diaz"
    }
   ]
  },
  "wtd": {
-  "label": "Sep 14–Sep 15",
-  "leads": 2,
-  "active_sources": 2,
-  "zero_count": 6,
-  "zero_names": "Felix Diaz, Theresa Feehan, Yhma Karimy, James Codomo, Elvis Regis, Nicholas Lisi",
+  "label": "Sep 14–Sep 16",
+  "leads": 7,
+  "active_sources": 3,
+  "zero_count": 5,
+  "zero_names": "Theresa Feehan, Yhma Karimy, James Codomo, Elvis Regis, Nicholas Lisi",
   "buckets": [
+   {
+    "name": "Sal Rizzolo",
+    "color": "#579bfc",
+    "n": 5
+   },
    {
     "name": "Matthew Porcaro",
     "color": "#7b6bd6",
     "n": 1
    },
    {
-    "name": "Sal Rizzolo",
-    "color": "#579bfc",
+    "name": "Felix Diaz",
+    "color": "#00c875",
     "n": 1
    }
   ],
   "detail": [
    {
     "d": "Sep 14",
+    "name": "Jean Augustin",
+    "credit": "Sal Rizzolo"
+   },
+   {
+    "d": "Sep 14",
     "name": "Adam Igoglia",
     "credit": "Matthew Porcaro"
    },
    {
-    "d": "Sep 14",
-    "name": "Jean Augustin",
+    "d": "Sep 15",
+    "name": "Saul Carbajal (Refi / Debt Consolidation)",
     "credit": "Sal Rizzolo"
+   },
+   {
+    "d": "Sep 15",
+    "name": "Luis Rojos",
+    "credit": "Sal Rizzolo"
+   },
+   {
+    "d": "Sep 15",
+    "name": "Apping - Daughter Buyout (Gift of Equity)",
+    "credit": "Sal Rizzolo"
+   },
+   {
+    "d": "Sep 15",
+    "name": "Semia Jackson & Isaiah Jones",
+    "credit": "Sal Rizzolo"
+   },
+   {
+    "d": "Sep 16",
+    "name": "Anthony Sanabria",
+    "credit": "Felix Diaz"
    }
   ]
  }
