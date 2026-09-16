@@ -106,7 +106,7 @@ def pane_bylo():
           <thead><tr><th>Credited To</th>{th}<th>YTD</th></tr></thead>
           <tbody>{rows}<tr class="team-row"><td>Team Total</td>{tot}<td>{d["leads_ytd"]}</td></tr></tbody>
         </table></div></div>
-        <p style="font-size:10px;color:var(--text3);margin-top:8px">203K Way leads credited by Junior: Elvis Regis &rarr; Elvis - 203K Way, Jesse Cone &rarr; Jesse - 203K Way, all others &rarr; Sal - 203K Way. Non-203K = creation-log creator; Alasia entries &rarr; L/O. Dates bucketed in America/New_York.</p>
+        <p style="font-size:10px;color:var(--text3);margin-top:8px">203K Way leads credited to Matt + the Junior (Matt + Elvis, Matt + Jesse, Matt + James; no junior &rarr; Matt - 203K Way). Alasia entries &rarr; Sal. Everyone else = creator. Includes leads moved to the Master Pipeline; Richard Luxmore excluded.</p>
       </div>
       <div class="section"><div class="section-title">Active Rolling Pipeline by LO (open deals)</div>
         <div class="tbl-wrap"><div class="tbl-scroll"><table><thead><tr><th>Loan Officer</th><th>Open Deals</th><th>Pipeline Volume</th></tr></thead>
