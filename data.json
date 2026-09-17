@@ -1,6 +1,6 @@
 {
- "pull_date": "Sep 16, 2026",
- "ytd_range": "Jan 1 – Sep 16, 2026",
+ "pull_date": "Sep 17, 2026",
+ "ytd_range": "Jan 1 – Sep 17, 2026",
  "months": [
   "Jan",
   "Feb",
@@ -13,10 +13,10 @@
   "Sep"
  ],
  "current_month_partial": true,
- "leads_ytd": 521,
+ "leads_ytd": 520,
  "funded_ytd": 102,
  "volume_ytd": 59498342,
- "pipeline_value": 20467474,
+ "pipeline_value": 21042870,
  "pipeline_deals": 35,
  "pull_through": "19.6%",
  "leads_by_month": [
@@ -27,7 +27,7 @@
   59,
   75,
   77,
-  76,
+  75,
   24
  ],
  "funded_by_month": [
@@ -52,7 +52,7 @@
   9162715,
   2479750
  ],
- "pipeline_note": "Active Rolling Pipeline: $20.47M across 35 open deals. Open deals in Limbo, Accepted Offers, Ready for Setup, Loans in Setup, and Prep for Submission, plus the September + October groups. Excludes Closed/Funded, dead, and past funded months.",
+ "pipeline_note": "Active Rolling Pipeline: $21.04M across 35 open deals. Open deals in Limbo, Accepted Offers, Ready for Setup, Loans in Setup, and Prep for Submission, plus the September + October groups. Excludes Closed/Funded, dead, and past funded months.",
  "credit_note": "Leads with 203K Way as Referral Contact are credited to Matt + the Junior &mdash; <strong>Matt + Elvis</strong>, <strong>Matt + Jesse</strong>, <strong>Matt + James</strong>; no/other junior &rarr; <strong>Matt - 203K Way</strong>. Leads Alasia enters &rarr; <strong>Sal Rizzolo</strong>. Everyone else = the person who created the lead. Leads counted from the Lead Board <strong>plus</strong> Master Pipeline deals created this year (leads moved to the pipeline still count, dated by their creation log). Richard Luxmore's leads are excluded. Lead dates bucketed in America/New_York.",
  "lead_credit": [
   {
@@ -75,17 +75,17 @@
    "name": "Matt + Elvis",
    "color": "#cab641",
    "m": [
-    1,
     2,
+    3,
     21,
     10,
     7,
     16,
     13,
-    3,
+    6,
     0
    ],
-   "ytd": 73
+   "ytd": 78
   },
   {
    "name": "Felix Diaz",
@@ -130,10 +130,10 @@
     3,
     2,
     5,
-    8,
+    7,
     3
    ],
-   "ytd": 28
+   "ytd": 27
   },
   {
    "name": "Matt + Jesse",
@@ -178,10 +178,10 @@
     1,
     1,
     1,
-    4,
+    1,
     0
    ],
-   "ytd": 18
+   "ytd": 15
   },
   {
    "name": "Rob Scaccia",
@@ -232,22 +232,6 @@
    "ytd": 6
   },
   {
-   "name": "Matt + James",
-   "color": "#c4a35a",
-   "m": [
-    1,
-    1,
-    1,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "ytd": 3
-  },
-  {
    "name": "Nicholas Lisi",
    "color": "#777777",
    "m": [
@@ -262,6 +246,22 @@
     0
    ],
    "ytd": 3
+  },
+  {
+   "name": "Matt + James",
+   "color": "#c4a35a",
+   "m": [
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "ytd": 1
   },
   {
    "name": "Lead Intake (form)",
@@ -309,7 +309,7 @@
    "name": "Theresa Feehan",
    "color": "#66ccff",
    "deals": 2,
-   "vol": 600000
+   "vol": 1175396
   },
   {
    "name": "James Codomo",
@@ -566,7 +566,7 @@
   {
    "name": "203K Way Team",
    "color": "#7b6bd6",
-   "leads": 149,
+   "leads": 148,
    "contract": 6,
    "funded": 3,
    "pct": "2.0%&#9733;",
@@ -584,7 +584,7 @@
    "status": "Strong"
   }
  ],
- "pull_through_note": "Pull-through = 2026 funded &divide; YTD credited leads (Lead Board + leads moved to the Master Pipeline). 203K Way Team groups all Matt + Junior 203K leads plus Matt's direct leads (149) against Matt-owned fundings. &#9733; 203K benchmark: 40% lead-to-board / 20% app. Richard Luxmore is excluded from lead counts and per-person tables; his 16 fundings ($9.45M) remain in the team funded and volume totals, so person rows do not sum to the team total. Elvis Regis solo (1 open deal), Rob Scaccia and Nicholas Lisi are omitted.",
+ "pull_through_note": "Pull-through = 2026 funded &divide; YTD credited leads (Lead Board + leads moved to the Master Pipeline). 203K Way Team groups all Matt + Junior 203K leads plus Matt's direct leads (148) against Matt-owned fundings. &#9733; 203K benchmark: 40% lead-to-board / 20% app. Richard Luxmore is excluded from lead counts and per-person tables; his 16 fundings ($9.45M) remain in the team funded and volume totals, so person rows do not sum to the team total. Elvis Regis solo (1 open deal), Rob Scaccia and Nicholas Lisi are omitted.",
  "avg_loan": 583317,
  "vol_kpis": [
   {
@@ -607,39 +607,39 @@
   }
  ],
  "positives": [
-  "Team has funded 102 loans worth $59.50M YTD &mdash; Dumlao and Martinez were marked funded since the last pull.",
-  "September has 5 fundings ($2.48M) through the 16th, with 4 more scheduled to close Sep 17&ndash;25 (Paulino, Schierlitz, Devarice, McDevitt &mdash; $3.08M).",
-  "October keeps building &mdash; 18 open deals are now dated for October ($10.40M), up from 15 ($9.09M) at the last pull.",
+  "Team has funded 102 loans worth $59.50M YTD &mdash; unchanged since the last pull, and it reconciles three ways (month, loan type, LO).",
+  "September has 5 fundings ($2.48M) through the 17th, with 4 more scheduled Sep 17&ndash;25 ($3.08M) &mdash; Paulino and Schierlitz are set to close today, Devarice tomorrow, McDevitt on the 25th.",
+  "Active pipeline rose to $21.04M across 35 deals (from $20.47M) &mdash; Modica (Theresa) now carries a $575K loan amount.",
+  "October keeps building &mdash; 19 open deals are dated for October ($10.98M), up from 18 ($10.40M) at the last pull.",
   "Sal drives 270 credited leads and $38.59M funded across 65 loans &mdash; 65% of team volume.",
-  "August finished as the 2nd best lead month of the year (76), one behind July (77).",
-  "203K Way is still the biggest single channel &mdash; 121 YTD leads credited to Matt + Junior (Elvis 73, Jesse 27, James 3, no junior 18)."
+  "203K Way is still the biggest single channel &mdash; 121 YTD leads credited to Matt + Junior (Elvis 78, Jesse 27, James 1, no junior 15); juniors were filled in on older 203K leads since the last pull."
  ],
  "watching": [
-  "September lead pace is soft: 24 leads through the 16th (1.50/day) vs 2.45/day in August &mdash; 7 of them came on one day (Sep 4).",
+  "September lead pace is soft: 24 leads through the 17th (1.41/day) vs 2.42/day in August &mdash; 7 of them came on one day (Sep 4), and none have come in yet today.",
   "203K Way has gone quiet &mdash; 1 lead in September (Sep 1) vs 17 in August.",
   "Miles ($675K, Sal) is past its 9/11 closing date and still at Subbed for Clear &mdash; update the stage if it closed.",
-  "7 files still sit at NEED SETUP across Limbo, Accepted Offers and Ready for Setup; Santos (Felix) and Modica (Theresa) have no loan amount.",
-  "Paulino ($650K, closing 9/17) still lists Richard Luxmore as co-owner &mdash; credited to Matt.",
+  "7 files still sit at NEED SETUP across Limbo, Accepted Offers and Ready for Setup; Santos (Felix) still has no loan amount.",
+  "Paulino ($650K, closing today) still lists Richard Luxmore as co-owner &mdash; credited to Matt.",
   "Anthony Sanabria (Felix) appears twice on the Lead Board &mdash; Sep 9 and again Sep 16 &mdash; likely a duplicate. Yhma stays cold: 18 leads YTD, none since June."
  ],
  "mtd": {
   "title": "September MTD",
   "leads": 24,
-  "range": "Sep 1–16",
+  "range": "Sep 1–17",
   "mon": "Sep",
-  "sub": "Sep 1–16, 2026 &middot; 16 of 30 days &middot; August final for context",
+  "sub": "Sep 1–17, 2026 &middot; 17 of 30 days &middot; August final for context",
   "kpis": [
    {
     "label": "Sep MTD Leads",
     "var": "--blue",
     "val": "24",
-    "sub": "Sep 1–16 &middot; 1.50/day"
+    "sub": "Sep 1–17 &middot; 1.41/day"
    },
    {
     "label": "August Final Leads",
     "var": "--green",
-    "val": "76",
-    "sub": "2nd best of 2026"
+    "val": "75",
+    "sub": "tied 2nd with Mar &amp; Jun"
    },
    {
     "label": "Sep Funded",
@@ -654,7 +654,7 @@
     "sub": "$6.61M in the Sep group"
    }
   ],
-  "note": "<strong>September is running at about 61% of August's lead pace:</strong> 24 leads in 16 days (1.50/day) vs 2.45/day in August. On fundings, 5 loans ($2.48M) have closed and 10 more ($6.61M) are open in the September group &mdash; 4 of them are scheduled for Sep 17&ndash;25, and Miles (9/11) is past its closing date.",
+  "note": "<strong>September is running at about 58% of August's lead pace:</strong> 24 leads in 17 days (1.41/day) vs 2.42/day in August. On fundings, 5 loans ($2.48M) have closed and 10 more ($6.61M) are open in the September group &mdash; 4 of them are scheduled for Sep 17&ndash;25 (two of them today), and Miles (9/11) is past its closing date.",
   "days_in_month": 30,
   "daily": [
    1,
@@ -672,23 +672,24 @@
    1,
    2,
    4,
-   1
+   1,
+   0
   ],
   "pace": [
    {
     "m": "September 2026",
     "leads": 24,
-    "days": 16,
-    "per": "1.50",
+    "days": 17,
+    "per": "1.41",
     "ctx": "month-to-date",
     "hl": true
    },
    {
     "m": "August 2026",
-    "leads": 76,
+    "leads": 75,
     "days": 31,
-    "per": "2.45",
-    "ctx": "2nd best month",
+    "per": "2.42",
+    "ctx": "tied 2nd (with Mar, Jun)",
     "hl": true
    },
    {
@@ -704,13 +705,13 @@
     "leads": 75,
     "days": 30,
     "per": "2.50",
-    "ctx": "tied 3rd with March",
+    "ctx": "tied 2nd (with Mar, Aug)",
     "hl": false
    }
   ]
  },
  "weekly": {
-  "label": "Sep 10–Sep 16",
+  "label": "Sep 11–Sep 17",
   "leads": 9,
   "active_sources": 4,
   "zero_count": 4,
@@ -786,7 +787,7 @@
   ]
  },
  "wtd": {
-  "label": "Sep 14–Sep 16",
+  "label": "Sep 14–Sep 17",
   "leads": 7,
   "active_sources": 3,
   "zero_count": 5,
