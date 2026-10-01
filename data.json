@@ -1,784 +1,859 @@
 {
- "pull_date": "Sep 28, 2026",
- "ytd_range": "Jan 1 – Sep 28, 2026",
- "months": [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep"
- ],
- "current_month_partial": true,
- "leads_ytd": 527,
- "funded_ytd": 107,
- "volume_ytd": 63037091,
- "pipeline_value": 17316442,
- "pipeline_deals": 29,
- "pull_through": "20.3%",
- "leads_by_month": [
-  42,
-  40,
-  75,
-  53,
-  59,
-  75,
-  76,
-  75,
-  32
- ],
- "funded_by_month": [
-  13,
-  11,
-  7,
-  15,
-  15,
-  9,
-  13,
-  14,
-  10
- ],
- "volume_by_month": [
-  8601754,
-  5645419,
-  3737455,
-  8535259,
-  8248471,
-  4986376,
-  8101143,
-  9162715,
-  6018499
- ],
- "pipeline_note": "Active Rolling Pipeline: $17.32M across 29 open deals. Open deals in Limbo, Accepted Offers, Ready for Setup, Loans in Setup, and Prep for Submission, plus the September + October groups. Excludes Closed/Funded, dead, past funded months, and the new November group (2 deals, $1.03M).",
- "credit_note": "Leads with 203K Way as Referral Contact are credited to Matt + the Junior &mdash; <strong>Matt + Elvis</strong>, <strong>Matt + Jesse</strong>, <strong>Matt + James</strong>; no/other junior &rarr; <strong>Matt - 203K Way</strong>. Leads Alasia enters &rarr; <strong>Sal Rizzolo</strong>. Everyone else = the person who created the lead. Leads counted from the Lead Board <strong>plus</strong> Master Pipeline deals created this year (leads moved to the pipeline still count, dated by their creation log). Richard Luxmore's leads are excluded. Lead dates bucketed in America/New_York.",
- "lead_credit": [
-  {
-   "name": "Sal Rizzolo",
-   "color": "#579bfc",
-   "m": [
-    24,
-    23,
-    29,
-    27,
-    36,
+  "pull_date": "Oct 1, 2026",
+  "ytd_range": "Jan 1 – Oct 1, 2026",
+  "months": [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct"
+  ],
+  "current_month_partial": true,
+  "leads_ytd": 533,
+  "funded_ytd": 109,
+  "volume_ytd": 64512091,
+  "pipeline_value": 15868901,
+  "pipeline_deals": 28,
+  "pull_through": "20.5%",
+  "leads_by_month": [
     42,
-    35,
-    37,
-    22
-   ],
-   "ytd": 275
-  },
-  {
-   "name": "Matt + Elvis",
-   "color": "#cab641",
-   "m": [
-    2,
-    3,
-    21,
-    10,
-    7,
-    16,
+    40,
+    75,
+    53,
+    59,
+    74,
+    76,
+    75,
+    39,
+    0
+  ],
+  "funded_by_month": [
     13,
-    6,
-    0
-   ],
-   "ytd": 78
-  },
-  {
-   "name": "Felix Diaz",
-   "color": "#00c875",
-   "m": [
-    0,
-    0,
-    0,
-    5,
+    11,
     7,
-    6,
-    3,
-    8,
-    3
-   ],
-   "ytd": 32
-  },
-  {
-   "name": "Theresa Feehan",
-   "color": "#66ccff",
-   "m": [
-    6,
-    1,
+    15,
+    15,
     9,
-    3,
-    1,
-    1,
-    4,
-    2,
-    1
-   ],
-   "ytd": 28
-  },
-  {
-   "name": "Matthew Porcaro",
-   "color": "#7b6bd6",
-   "m": [
-    0,
-    0,
-    4,
-    3,
-    3,
-    2,
-    5,
-    7,
-    3
-   ],
-   "ytd": 27
-  },
-  {
-   "name": "Matt + Jesse",
-   "color": "#e879b9",
-   "m": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    6,
-    10,
-    10,
-    1
-   ],
-   "ytd": 27
-  },
-  {
-   "name": "Yhma Karimy",
-   "color": "#1D9E75",
-   "m": [
-    3,
-    9,
-    4,
-    1,
-    0,
-    1,
-    0,
-    0,
-    1
-   ],
-   "ytd": 19
-  },
-  {
-   "name": "Matt - 203K Way",
-   "color": "#9d50dd",
-   "m": [
-    1,
-    1,
-    7,
-    2,
-    1,
-    1,
-    1,
-    1,
+    13,
+    14,
+    12,
     0
-   ],
-   "ytd": 15
-  },
-  {
-   "name": "James Codomo",
-   "color": "#666666",
-   "m": [
-    1,
-    2,
-    0,
-    2,
-    2,
-    0,
-    0,
-    0,
-    1
-   ],
-   "ytd": 8
-  },
-  {
-   "name": "Rob Scaccia",
-   "color": "#666666",
-   "m": [
-    4,
-    1,
-    0,
-    0,
-    0,
-    0,
-    1,
-    1,
-    0
-   ],
-   "ytd": 7
-  },
-  {
-   "name": "Elvis Regis",
-   "color": "#888888",
-   "m": [
-    0,
-    0,
-    0,
-    0,
-    2,
-    0,
-    2,
-    2,
-    0
-   ],
-   "ytd": 6
-  },
-  {
-   "name": "Nicholas Lisi",
-   "color": "#777777",
-   "m": [
-    1,
-    0,
-    0,
-    0,
-    0,
-    0,
-    1,
-    1,
-    0
-   ],
-   "ytd": 3
-  },
-  {
-   "name": "Lead Intake (form)",
-   "color": "#555555",
-   "m": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    1,
-    0,
-    0
-   ],
-   "ytd": 1
-  },
-  {
-   "name": "Matt + James",
-   "color": "#c4a35a",
-   "m": [
-    0,
-    0,
-    1,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "ytd": 1
-  }
- ],
- "pipeline_by_lo": [
-  {
-   "name": "Sal Rizzolo",
-   "color": "#579bfc",
-   "deals": 14,
-   "vol": 7972821
-  },
-  {
-   "name": "Felix Diaz",
-   "color": "#00c875",
-   "deals": 6,
-   "vol": 4035975
-  },
-  {
-   "name": "Matthew Porcaro",
-   "color": "#7b6bd6",
-   "deals": 3,
-   "vol": 1635000
-  },
-  {
-   "name": "James Codomo",
-   "color": "#666666",
-   "deals": 2,
-   "vol": 1437250
-  },
-  {
-   "name": "Theresa Feehan",
-   "color": "#66ccff",
-   "deals": 2,
-   "vol": 1175396
-  },
-  {
-   "name": "Elvis Regis",
-   "color": "#888888",
-   "deals": 1,
-   "vol": 700000
-  },
-  {
-   "name": "Rob Scaccia",
-   "color": "#666666",
-   "deals": 1,
-   "vol": 360000
-  }
- ],
- "funded_by_lo": [
-  {
-   "name": "Sal Rizzolo",
-   "color": "#579bfc",
-   "m": [
-    5,
-    7,
-    7,
-    9,
-    10,
-    7,
-    9,
-    7,
-    7
-   ],
-   "total": 68,
-   "v": [
-    3249500,
-    3798817,
+  ],
+  "volume_by_month": [
+    8601754,
+    5645419,
     3737455,
-    5398385,
-    5611221,
-    3985251,
-    5892062,
-    4769160,
-    4197749
-   ],
-   "vtotal": 40639600
-  },
-  {
-   "name": "Felix Diaz",
-   "color": "#00c875",
-   "m": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    3,
-    3,
+    8535259,
+    8248471,
+    4986376,
+    8101143,
+    9162715,
+    7493499,
     0
-   ],
-   "total": 6,
-   "v": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    1409081,
-    2237527,
-    0
-   ],
-   "vtotal": 3646608
-  },
-  {
-   "name": "Theresa Feehan",
-   "color": "#66ccff",
-   "m": [
-    2,
-    1,
-    0,
-    3,
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 6,
-   "v": [
-    1024564,
-    665000,
-    0,
-    1634874,
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "vtotal": 3324438
-  },
-  {
-   "name": "Matthew Porcaro",
-   "color": "#7b6bd6",
-   "m": [
-    0,
-    0,
-    0,
-    0,
-    1,
-    0,
-    0,
-    1,
-    3
-   ],
-   "total": 5,
-   "v": [
-    0,
-    0,
-    0,
-    0,
-    400000,
-    0,
-    0,
-    535128,
-    1820750
-   ],
-   "vtotal": 2755878
-  },
-  {
-   "name": "James Codomo",
-   "color": "#666666",
-   "m": [
-    1,
-    1,
-    0,
-    0,
-    0,
-    0,
-    1,
-    1,
-    0
-   ],
-   "total": 4,
-   "v": [
-    640190,
-    312352,
-    0,
-    0,
-    0,
-    0,
-    800000,
-    381900,
-    0
-   ],
-   "vtotal": 2134442
-  },
-  {
-   "name": "Yhma Karimy",
-   "color": "#1D9E75",
-   "m": [
-    0,
-    0,
-    0,
-    1,
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 1,
-   "v": [
-    0,
-    0,
-    0,
-    657000,
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "vtotal": 657000
-  },
-  {
-   "name": "Rob Scaccia",
-   "color": "#666666",
-   "m": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    1,
-    0
-   ],
-   "total": 1,
-   "v": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    430000,
-    0
-   ],
-   "vtotal": 430000
-  }
- ],
- "pull_through_rows": [
-  {
-   "name": "Sal Rizzolo",
-   "color": "#579bfc",
-   "leads": 275,
-   "contract": 14,
-   "funded": 68,
-   "pct": "24.7%",
-   "badge": "badge-green",
-   "status": "Strong"
-  },
-  {
-   "name": "Theresa Feehan",
-   "color": "#66ccff",
-   "leads": 28,
-   "contract": 2,
-   "funded": 6,
-   "pct": "21.4%",
-   "badge": "badge-green",
-   "status": "Strong"
-  },
-  {
-   "name": "Felix Diaz",
-   "color": "#00c875",
-   "leads": 32,
-   "contract": 6,
-   "funded": 6,
-   "pct": "18.8%",
-   "badge": "badge-orange",
-   "status": "Low"
-  },
-  {
-   "name": "Yhma Karimy",
-   "color": "#1D9E75",
-   "leads": 19,
-   "contract": 0,
-   "funded": 1,
-   "pct": "5.3%",
-   "badge": "badge-orange",
-   "status": "Low"
-  },
-  {
-   "name": "203K Way Team",
-   "color": "#7b6bd6",
-   "leads": 148,
-   "contract": 3,
-   "funded": 5,
-   "pct": "3.4%&#9733;",
-   "badge": "badge-gray",
-   "status": "203K norm"
-  },
-  {
-   "name": "James Codomo",
-   "color": "#666666",
-   "leads": 8,
-   "contract": 2,
-   "funded": 4,
-   "pct": "50.0%",
-   "badge": "badge-green",
-   "status": "Strong"
-  }
- ],
- "pull_through_note": "Pull-through = 2026 funded &divide; YTD credited leads (Lead Board + leads moved to the Master Pipeline). 203K Way Team groups all Matt + Junior 203K leads plus Matt's direct leads (148) against Matt-owned fundings. &#9733; 203K benchmark: 40% lead-to-board / 20% app. Richard Luxmore is excluded from lead counts and per-person tables; his 16 fundings ($9.45M) remain in the team funded and volume totals, so person rows do not sum to the team total. Elvis Regis solo (1 open deal), Rob Scaccia and Nicholas Lisi are omitted.",
- "avg_loan": 589132,
- "vol_kpis": [
-  {
-   "label": "Sal Rizzolo",
-   "var": "--blue",
-   "val": "$40.6M",
-   "sub": "64.5%"
-  },
-  {
-   "label": "Felix",
-   "var": "--green",
-   "val": "$3.6M",
-   "sub": "5.8%"
-  },
-  {
-   "label": "Theresa",
-   "var": "--orange",
-   "val": "$3.3M",
-   "sub": "5.3%"
-  }
- ],
- "positives": [
-  "Team has funded 107 loans worth $63.04M YTD &mdash; up 5 loans / $3.54M since the last pull, and it reconciles three ways (month, loan type, LO).",
-  "September has 10 fundings ($6.02M) &mdash; Paulino, Schierlitz, Devarice, McDevitt and Gomez all closed since the last pull.",
-  "4 more September loans ($2.49M) are dated Sep 30 &mdash; Adebayo and Miles SCHEDULED, Brown and Giambrone CLEARED. If all four fund, September hits 14 loans / $8.50M, level with August.",
-  "Matt has closed 3 loans ($1.82M) in September alone &mdash; more than his previous 8 months combined (2).",
-  "Sal drives 275 credited leads and $40.64M funded across 68 loans &mdash; 64.5% of team volume.",
-  "October is set up: 9 open deals ($4.42M) in the October group, with Bishop and Fischetti scheduled/cleared for Oct 5."
- ],
- "watching": [
-  "September lead pace is the weakest of the year: 32 leads through the 28th (1.14/day) vs 2.42/day in August &mdash; zero new leads Sep 25&ndash;28.",
-  "203K Way has gone quiet &mdash; 1 lead in September (Sep 1) vs 17 in August. Matt + Elvis has none since August.",
-  "Active pipeline fell to $17.32M across 29 deals (from $21.04M / 35) &mdash; mostly because 5 deals funded; new inflow into the pre-close groups is thin.",
-  "8 files sit at NEED SETUP across Limbo, Accepted Offers, Ready for Setup and Prep for Submission; Santos (Felix) still has no loan amount. Caliendo (Theresa, Limbo, IN SETUP) carries a Sep 30 closing date that looks stale.",
-  "Walsh ($330K, Matt, PAUSE) and Azzato ($700K, Sal) sit in the new November group but carry Oct 31 closing dates &mdash; not counted in the rolling pipeline until the group or dates are fixed.",
-  "Miles ($675K, Sal) slipped from 9/11 to 9/30 and is now SCHEDULED. Felix has no fundings since August despite 6 open deals ($4.04M); Yhma logged her first lead since June (Johnson, Sep 24)."
- ],
- "mtd": {
-  "title": "September MTD",
-  "leads": 32,
-  "range": "Sep 1–28",
-  "mon": "Sep",
-  "sub": "Sep 1–28, 2026 &middot; 28 of 30 days &middot; August final for context",
-  "kpis": [
-   {
-    "label": "Sep MTD Leads",
-    "var": "--blue",
-    "val": "32",
-    "sub": "Sep 1–28 &middot; 1.14/day"
-   },
-   {
-    "label": "August Final Leads",
-    "var": "--green",
-    "val": "75",
-    "sub": "tied 2nd with Mar &amp; Jun"
-   },
-   {
-    "label": "Sep Funded",
-    "var": "--purple",
-    "val": "10",
-    "sub": "$6.02M so far"
-   },
-   {
-    "label": "Sep Open Deals",
-    "var": "--amber",
-    "val": "4",
-    "sub": "$2.49M, all dated Sep 30"
-   }
   ],
-  "note": "<strong>September leads are running at under half of August's pace:</strong> 32 leads in 28 days (1.14/day) vs 2.42/day in August, and none have landed since Sep 24. Fundings are the bright spot &mdash; 10 loans ($6.02M) have closed, and 4 more ($2.49M: Adebayo, Brown, Giambrone, Miles) are dated Sep 30, which would put September level with August at 14 loans.",
-  "days_in_month": 30,
-  "daily": [
-   1,
-   1,
-   1,
-   7,
-   1,
-   0,
-   1,
-   2,
-   1,
-   0,
-   0,
-   1,
-   1,
-   2,
-   4,
-   0,
-   0,
-   2,
-   0,
-   0,
-   2,
-   2,
-   1,
-   2,
-   0,
-   0,
-   0,
-   0
+  "pipeline_note": "Active Rolling Pipeline: $15.87M across 28 open deals. Open deals in Accepted Offers, Ready for Setup and Prep for Submission (Limbo and Loans in Setup are empty), plus the October + November groups. Excludes Closed/Funded, dead, and past funded months.",
+  "credit_note": "Leads with 203K Way as Referral Contact are credited to Matt + the Junior &mdash; <strong>Matt + Elvis</strong>, <strong>Matt + Jesse</strong>, <strong>Matt + James</strong>; no/other junior &rarr; <strong>Matt - 203K Way</strong>. Leads Alasia enters &rarr; <strong>Sal Rizzolo</strong>. Everyone else = the person who created the lead. Leads counted from the Lead Board <strong>plus</strong> Master Pipeline deals created this year (leads moved to the pipeline still count, dated by their creation log). Richard Luxmore's leads are excluded. Lead dates bucketed in America/New_York.",
+  "lead_credit": [
+    {
+      "name": "Sal Rizzolo",
+      "color": "#579bfc",
+      "m": [
+        24,
+        23,
+        29,
+        27,
+        36,
+        41,
+        35,
+        37,
+        24,
+        0
+      ],
+      "ytd": 276
+    },
+    {
+      "name": "Matt + Elvis",
+      "color": "#cab641",
+      "m": [
+        2,
+        3,
+        21,
+        10,
+        7,
+        16,
+        13,
+        6,
+        0,
+        0
+      ],
+      "ytd": 78
+    },
+    {
+      "name": "Felix Diaz",
+      "color": "#00c875",
+      "m": [
+        0,
+        0,
+        0,
+        5,
+        7,
+        6,
+        3,
+        8,
+        3,
+        0
+      ],
+      "ytd": 32
+    },
+    {
+      "name": "Theresa Feehan",
+      "color": "#66ccff",
+      "m": [
+        6,
+        1,
+        9,
+        3,
+        1,
+        1,
+        4,
+        2,
+        3,
+        0
+      ],
+      "ytd": 30
+    },
+    {
+      "name": "Matthew Porcaro",
+      "color": "#7b6bd6",
+      "m": [
+        0,
+        0,
+        4,
+        3,
+        3,
+        2,
+        5,
+        7,
+        4,
+        0
+      ],
+      "ytd": 28
+    },
+    {
+      "name": "Matt + Jesse",
+      "color": "#e879b9",
+      "m": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        10,
+        10,
+        1,
+        0
+      ],
+      "ytd": 27
+    },
+    {
+      "name": "Yhma Karimy",
+      "color": "#1D9E75",
+      "m": [
+        3,
+        9,
+        4,
+        1,
+        0,
+        1,
+        0,
+        0,
+        2,
+        0
+      ],
+      "ytd": 20
+    },
+    {
+      "name": "Matt - 203K Way",
+      "color": "#9d50dd",
+      "m": [
+        1,
+        1,
+        7,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "ytd": 16
+    },
+    {
+      "name": "James Codomo",
+      "color": "#666666",
+      "m": [
+        1,
+        2,
+        0,
+        2,
+        2,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "ytd": 8
+    },
+    {
+      "name": "Rob Scaccia",
+      "color": "#666666",
+      "m": [
+        4,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "ytd": 7
+    },
+    {
+      "name": "Elvis Regis",
+      "color": "#888888",
+      "m": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        2,
+        2,
+        0,
+        0
+      ],
+      "ytd": 6
+    },
+    {
+      "name": "Nicholas Lisi",
+      "color": "#777777",
+      "m": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "ytd": 3
+    },
+    {
+      "name": "Lead Intake (form)",
+      "color": "#555555",
+      "m": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "ytd": 1
+    },
+    {
+      "name": "Matt + James",
+      "color": "#c4a35a",
+      "m": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ytd": 1
+    }
   ],
-  "pace": [
-   {
-    "m": "September 2026",
-    "leads": 32,
-    "days": 28,
-    "per": "1.14",
-    "ctx": "month-to-date",
-    "hl": true
-   },
-   {
-    "m": "August 2026",
-    "leads": 75,
-    "days": 31,
-    "per": "2.42",
-    "ctx": "tied 2nd (with Mar, Jun)",
-    "hl": true
-   },
-   {
-    "m": "July 2026",
-    "leads": 76,
-    "days": 31,
-    "per": "2.45",
-    "ctx": "most leads of the year",
-    "hl": true
-   },
-   {
-    "m": "June 2026",
-    "leads": 75,
-    "days": 30,
-    "per": "2.50",
-    "ctx": "best daily pace",
-    "hl": false
-   }
-  ]
- },
- "weekly": {
-  "label": "Sep 22–Sep 28",
-  "leads": 5,
-  "active_sources": 3,
-  "zero_count": 5,
-  "zero_names": "Felix Diaz, Theresa Feehan, Elvis Regis, Matthew Porcaro, Nicholas Lisi",
-  "buckets": [
-   {
-    "name": "Sal Rizzolo",
-    "color": "#579bfc",
-    "n": 3
-   },
-   {
-    "name": "James Codomo",
-    "color": "#666666",
-    "n": 1
-   },
-   {
-    "name": "Yhma Karimy",
-    "color": "#1D9E75",
-    "n": 1
-   }
+  "pipeline_by_lo": [
+    {
+      "name": "Sal Rizzolo",
+      "color": "#579bfc",
+      "deals": 15,
+      "vol": 8097821
+    },
+    {
+      "name": "Felix Diaz",
+      "color": "#00c875",
+      "deals": 4,
+      "vol": 3325975
+    },
+    {
+      "name": "Theresa Feehan",
+      "color": "#66ccff",
+      "deals": 3,
+      "vol": 1842855
+    },
+    {
+      "name": "James Codomo",
+      "color": "#666666",
+      "deals": 2,
+      "vol": 1437250
+    },
+    {
+      "name": "Matthew Porcaro",
+      "color": "#7b6bd6",
+      "deals": 4,
+      "vol": 1165000
+    }
   ],
-  "detail": [
-   {
-    "d": "Sep 22",
-    "name": "Brianne Ward",
-    "credit": "Sal Rizzolo"
-   },
-   {
-    "d": "Sep 22",
-    "name": "Mike Caminos",
-    "credit": "Sal Rizzolo"
-   },
-   {
-    "d": "Sep 23",
-    "name": "RODRIGUEZ, STEPHANIE",
-    "credit": "Sal Rizzolo"
-   },
-   {
-    "d": "Sep 24",
-    "name": "BONILLA,ADRIAN",
-    "credit": "James Codomo"
-   },
-   {
-    "d": "Sep 24",
-    "name": "JOHNSON, VANESSA",
-    "credit": "Yhma Karimy"
-   }
-  ]
- },
- "wtd": {
-  "label": "Sep 28",
-  "leads": 0,
-  "active_sources": 0,
-  "zero_count": 8,
-  "zero_names": "Sal Rizzolo, Felix Diaz, Theresa Feehan, Yhma Karimy, James Codomo, Elvis Regis, Matthew Porcaro, Nicholas Lisi",
-  "buckets": [],
-  "detail": []
- }
+  "funded_by_lo": [
+    {
+      "name": "Sal Rizzolo",
+      "color": "#579bfc",
+      "m": [
+        5,
+        7,
+        7,
+        9,
+        10,
+        7,
+        9,
+        7,
+        8,
+        0
+      ],
+      "total": 69,
+      "v": [
+        3249500,
+        3798817,
+        3737455,
+        5398385,
+        5611221,
+        3985251,
+        5892062,
+        4769160,
+        4872749,
+        0
+      ],
+      "vtotal": 41314600
+    },
+    {
+      "name": "Felix Diaz",
+      "color": "#00c875",
+      "m": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        3,
+        0,
+        0
+      ],
+      "total": 6,
+      "v": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1409081,
+        2237527,
+        0,
+        0
+      ],
+      "vtotal": 3646608
+    },
+    {
+      "name": "Matthew Porcaro",
+      "color": "#7b6bd6",
+      "m": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        4,
+        0
+      ],
+      "total": 6,
+      "v": [
+        0,
+        0,
+        0,
+        0,
+        400000,
+        0,
+        0,
+        535128,
+        2620750,
+        0
+      ],
+      "vtotal": 3555878
+    },
+    {
+      "name": "Theresa Feehan",
+      "color": "#66ccff",
+      "m": [
+        2,
+        1,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 6,
+      "v": [
+        1024564,
+        665000,
+        0,
+        1634874,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "vtotal": 3324438
+    },
+    {
+      "name": "James Codomo",
+      "color": "#666666",
+      "m": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "total": 4,
+      "v": [
+        640190,
+        312352,
+        0,
+        0,
+        0,
+        0,
+        800000,
+        381900,
+        0,
+        0
+      ],
+      "vtotal": 2134442
+    },
+    {
+      "name": "Yhma Karimy",
+      "color": "#1D9E75",
+      "m": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total": 1,
+      "v": [
+        0,
+        0,
+        0,
+        657000,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "vtotal": 657000
+    },
+    {
+      "name": "Rob Scaccia",
+      "color": "#666666",
+      "m": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "total": 1,
+      "v": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        430000,
+        0,
+        0
+      ],
+      "vtotal": 430000
+    }
+  ],
+  "pull_through_rows": [
+    {
+      "name": "Sal Rizzolo",
+      "color": "#579bfc",
+      "leads": 276,
+      "contract": 15,
+      "funded": 69,
+      "pct": "25.0%",
+      "badge": "badge-green",
+      "status": "Strong"
+    },
+    {
+      "name": "Theresa Feehan",
+      "color": "#66ccff",
+      "leads": 30,
+      "contract": 3,
+      "funded": 6,
+      "pct": "20.0%",
+      "badge": "badge-green",
+      "status": "Strong"
+    },
+    {
+      "name": "Felix Diaz",
+      "color": "#00c875",
+      "leads": 32,
+      "contract": 4,
+      "funded": 6,
+      "pct": "18.8%",
+      "badge": "badge-orange",
+      "status": "Low"
+    },
+    {
+      "name": "Yhma Karimy",
+      "color": "#1D9E75",
+      "leads": 20,
+      "contract": 0,
+      "funded": 1,
+      "pct": "5.0%",
+      "badge": "badge-orange",
+      "status": "Low"
+    },
+    {
+      "name": "203K Way Team",
+      "color": "#7b6bd6",
+      "leads": 150,
+      "contract": 4,
+      "funded": 6,
+      "pct": "4.0%&#9733;",
+      "badge": "badge-gray",
+      "status": "203K norm"
+    },
+    {
+      "name": "James Codomo",
+      "color": "#666666",
+      "leads": 8,
+      "contract": 2,
+      "funded": 4,
+      "pct": "50.0%",
+      "badge": "badge-green",
+      "status": "Strong"
+    }
+  ],
+  "pull_through_note": "Pull-through = 2026 funded &divide; YTD credited leads (Lead Board + leads moved to the Master Pipeline). 203K Way Team groups all Matt + Junior 203K leads plus Matt's direct leads (150) against Matt-owned fundings. &#9733; 203K benchmark: 40% lead-to-board / 20% app. Richard Luxmore is excluded from lead counts and per-person tables; his 16 fundings ($9.45M) remain in the team funded and volume totals, so person rows do not sum to the team total. Elvis Regis solo, Rob Scaccia and Nicholas Lisi are omitted.",
+  "avg_loan": 591854,
+  "vol_kpis": [
+    {
+      "label": "Sal Rizzolo",
+      "var": "--blue",
+      "val": "$41.3M",
+      "sub": "64.0%"
+    },
+    {
+      "label": "Felix",
+      "var": "--green",
+      "val": "$3.6M",
+      "sub": "5.7%"
+    },
+    {
+      "label": "Matt",
+      "var": "--orange",
+      "val": "$3.6M",
+      "sub": "5.5%"
+    }
+  ],
+  "positives": [
+    "Team has funded 109 loans worth $64.51M YTD &mdash; up 2 loans / $1.48M since the Sep 28 pull, and it reconciles three ways (month, loan type, LO).",
+    "September closed at 12 fundings ($7.49M) &mdash; Adebayo ($800K, Matt) and Miles ($675K, Sal) both funded Sep 30. the 6th-best month by volume this year.",
+    "Matt had his best month ever: 4 loans ($2.62M) in September, and his $3.56M YTD volume now passes Theresa for 3rd on the team.",
+    "Leads picked back up at month-end &mdash; 6 on Sep 30 alone (Sal 2, Theresa 2, Yhma 1, 203K Way 1), so the last 7 days show 7 leads after zero Sep 25&ndash;27.",
+    "October is loaded: 11 open deals ($5.43M) in the October group, with Brown and Giambrone dated Oct 2 and Bishop and Fischetti scheduled for Oct 5.",
+    "Sal drives 276 credited leads and $41.31M funded across 69 loans &mdash; 64.0% of team volume, with a 25.0% pull-through."
+  ],
+  "watching": [
+    "September finished with 39 leads (1.30/day) &mdash; the weakest month of the year, below February's 40 and roughly half of July&ndash;August (75&ndash;76).",
+    "203K Way stayed quiet: 2 leads in September (Sep 1 and Richard Cambridge on Sep 30) vs 17 in August; Matt + Elvis has had none since August.",
+    "Active pipeline slipped to $15.87M across 28 deals (from $17.32M / 29) even with the November group now counted &mdash; Limbo and Loans in Setup are empty.",
+    "9 files sit at NEED SETUP (5 in Accepted Offers, 3 in Prep for Submission, 1 in Ready for Setup); Espinal and Joseph (Accepted Offers) have no loan amount.",
+    "Walsh ($330K, Matt, PAUSE) and Azzato ($700K, Sal) sit in the November group with Oct 31 closing dates &mdash; now counted, but the group or dates need a fix.",
+    "Felix has no fundings since August despite 4 open deals ($3.33M); Yhma has 0 open deals of her own despite 2 September leads."
+  ],
+  "mtd": {
+    "title": "October MTD",
+    "leads": 0,
+    "range": "Oct 1",
+    "mon": "Oct",
+    "sub": "Oct 1, 2026 &middot; day 1 of 31 &middot; September final for context",
+    "kpis": [
+      {
+        "label": "Oct MTD Leads",
+        "var": "--blue",
+        "val": "0",
+        "sub": "Oct 1 &middot; month just started"
+      },
+      {
+        "label": "September Final Leads",
+        "var": "--green",
+        "val": "39",
+        "sub": "lowest month of 2026"
+      },
+      {
+        "label": "September Funded",
+        "var": "--purple",
+        "val": "12",
+        "sub": "$7.49M final"
+      },
+      {
+        "label": "Oct Open Deals",
+        "var": "--amber",
+        "val": "11",
+        "sub": "$5.43M in the October group"
+      }
+    ],
+    "note": "<strong>October starts today:</strong> no leads logged yet on Oct 1. September closed with 39 leads (1.30/day, the year's slowest) but 12 fundings ($7.49M). The October group already holds 11 open deals ($5.43M), with Brown and Giambrone dated Oct 2.",
+    "days_in_month": 31,
+    "daily": [
+      0
+    ],
+    "pace": [
+      {
+        "m": "October 2026",
+        "leads": 0,
+        "days": 1,
+        "per": "0.00",
+        "ctx": "month-to-date (day 1)",
+        "hl": true
+      },
+      {
+        "m": "September 2026",
+        "leads": 39,
+        "days": 30,
+        "per": "1.30",
+        "ctx": "lowest month of the year",
+        "hl": true
+      },
+      {
+        "m": "August 2026",
+        "leads": 75,
+        "days": 31,
+        "per": "2.42",
+        "ctx": "tied 2nd with Mar",
+        "hl": true
+      },
+      {
+        "m": "July 2026",
+        "leads": 76,
+        "days": 31,
+        "per": "2.45",
+        "ctx": "most leads of the year",
+        "hl": false
+      }
+    ]
+  },
+  "weekly": {
+    "label": "Sep 25–Oct 1",
+    "leads": 7,
+    "active_sources": 5,
+    "zero_count": 4,
+    "zero_names": "Felix Diaz, James Codomo, Elvis Regis, Nicholas Lisi",
+    "buckets": [
+      {
+        "name": "Sal Rizzolo",
+        "color": "#579bfc",
+        "n": 2
+      },
+      {
+        "name": "Theresa Feehan",
+        "color": "#66ccff",
+        "n": 2
+      },
+      {
+        "name": "Matthew Porcaro",
+        "color": "#7b6bd6",
+        "n": 1
+      },
+      {
+        "name": "Matt - 203K Way",
+        "color": "#9d50dd",
+        "n": 1
+      },
+      {
+        "name": "Yhma Karimy",
+        "color": "#1D9E75",
+        "n": 1
+      }
+    ],
+    "detail": [
+      {
+        "d": "Sep 28",
+        "name": "Lisa Tripodo",
+        "credit": "Matthew Porcaro"
+      },
+      {
+        "d": "Sep 30",
+        "name": "Alex Lapka",
+        "credit": "Sal Rizzolo"
+      },
+      {
+        "d": "Sep 30",
+        "name": "Enrique Menendez",
+        "credit": "Sal Rizzolo"
+      },
+      {
+        "d": "Sep 30",
+        "name": "GINAUD, MARIE",
+        "credit": "Theresa Feehan"
+      },
+      {
+        "d": "Sep 30",
+        "name": "Richard Cambridge",
+        "credit": "Matt - 203K Way"
+      },
+      {
+        "d": "Sep 30",
+        "name": "WARNKEN, DANIEL",
+        "credit": "Theresa Feehan"
+      },
+      {
+        "d": "Sep 30",
+        "name": "WEYER, ASHLEY",
+        "credit": "Yhma Karimy"
+      }
+    ]
+  },
+  "wtd": {
+    "label": "Sep 28–Oct 1",
+    "leads": 7,
+    "active_sources": 5,
+    "zero_count": 4,
+    "zero_names": "Felix Diaz, James Codomo, Elvis Regis, Nicholas Lisi",
+    "buckets": [
+      {
+        "name": "Sal Rizzolo",
+        "color": "#579bfc",
+        "n": 2
+      },
+      {
+        "name": "Theresa Feehan",
+        "color": "#66ccff",
+        "n": 2
+      },
+      {
+        "name": "Matthew Porcaro",
+        "color": "#7b6bd6",
+        "n": 1
+      },
+      {
+        "name": "Matt - 203K Way",
+        "color": "#9d50dd",
+        "n": 1
+      },
+      {
+        "name": "Yhma Karimy",
+        "color": "#1D9E75",
+        "n": 1
+      }
+    ],
+    "detail": [
+      {
+        "d": "Sep 28",
+        "name": "Lisa Tripodo",
+        "credit": "Matthew Porcaro"
+      },
+      {
+        "d": "Sep 30",
+        "name": "Alex Lapka",
+        "credit": "Sal Rizzolo"
+      },
+      {
+        "d": "Sep 30",
+        "name": "Enrique Menendez",
+        "credit": "Sal Rizzolo"
+      },
+      {
+        "d": "Sep 30",
+        "name": "GINAUD, MARIE",
+        "credit": "Theresa Feehan"
+      },
+      {
+        "d": "Sep 30",
+        "name": "Richard Cambridge",
+        "credit": "Matt - 203K Way"
+      },
+      {
+        "d": "Sep 30",
+        "name": "WARNKEN, DANIEL",
+        "credit": "Theresa Feehan"
+      },
+      {
+        "d": "Sep 30",
+        "name": "WEYER, ASHLEY",
+        "credit": "Yhma Karimy"
+      }
+    ]
+  }
 }
