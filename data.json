@@ -828,5 +828,322 @@
     "credit": "Sal Rizzolo"
    }
   ]
+ },
+ "lo_scorecard": {
+  "rows": [
+   {
+    "name": "Sal Rizzolo",
+    "color": "#579bfc",
+    "leads": [
+     24,
+     23,
+     29,
+     27,
+     36,
+     41,
+     36,
+     37,
+     24,
+     15
+    ],
+    "pa": [
+     10,
+     16,
+     14,
+     12,
+     11,
+     16,
+     11,
+     12,
+     9,
+     0
+    ],
+    "units": [
+     5,
+     7,
+     7,
+     9,
+     10,
+     7,
+     9,
+     7,
+     8,
+     2
+    ],
+    "vol": [
+     3249500,
+     3798817,
+     3737455,
+     5398385,
+     5611221,
+     3985251,
+     5892062,
+     4769160,
+     4872749,
+     1113000
+    ]
+   },
+   {
+    "name": "Matthew Porcaro",
+    "color": "#7b6bd6",
+    "leads": [
+     3,
+     4,
+     36,
+     15,
+     16,
+     29,
+     32,
+     28,
+     9,
+     6
+    ],
+    "pa": [
+     2,
+     2,
+     11,
+     5,
+     5,
+     9,
+     9,
+     6,
+     2,
+     2
+    ],
+    "units": [
+     0,
+     1,
+     1,
+     0,
+     2,
+     1,
+     5,
+     4,
+     6,
+     2
+    ],
+    "vol": [
+     0,
+     312352,
+     1040000,
+     0,
+     1102000,
+     554875,
+     3646212,
+     2493028,
+     3722000,
+     835000
+    ]
+   },
+   {
+    "name": "Felix Diaz",
+    "color": "#00c875",
+    "leads": [
+     0,
+     0,
+     0,
+     5,
+     7,
+     6,
+     3,
+     8,
+     3,
+     0
+    ],
+    "pa": [
+     0,
+     0,
+     0,
+     4,
+     3,
+     5,
+     1,
+     3,
+     0,
+     0
+    ],
+    "units": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     3,
+     3,
+     0,
+     0
+    ],
+    "vol": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1409081,
+     2237527,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "Theresa Feehan",
+    "color": "#66ccff",
+    "leads": [
+     6,
+     1,
+     9,
+     3,
+     1,
+     1,
+     4,
+     2,
+     3,
+     1
+    ],
+    "pa": [
+     6,
+     1,
+     4,
+     1,
+     0,
+     1,
+     0,
+     0,
+     2,
+     1
+    ],
+    "units": [
+     2,
+     1,
+     0,
+     3,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "vol": [
+     1024564,
+     665000,
+     0,
+     1634874,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "James Codomo",
+    "color": "#c4a35a",
+    "leads": [
+     1,
+     2,
+     1,
+     2,
+     2,
+     0,
+     0,
+     0,
+     1,
+     0
+    ],
+    "pa": [
+     1,
+     2,
+     0,
+     2,
+     2,
+     0,
+     0,
+     0,
+     1,
+     0
+    ],
+    "units": [
+     1,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     1,
+     0,
+     1
+    ],
+    "vol": [
+     640190,
+     312352,
+     0,
+     0,
+     0,
+     0,
+     800000,
+     381900,
+     0,
+     582250
+    ]
+   },
+   {
+    "name": "Yhma Karimy",
+    "color": "#1D9E75",
+    "leads": [
+     3,
+     9,
+     4,
+     1,
+     0,
+     1,
+     0,
+     0,
+     2,
+     1
+    ],
+    "pa": [
+     1,
+     8,
+     3,
+     1,
+     0,
+     1,
+     0,
+     0,
+     2,
+     1
+    ],
+    "units": [
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "vol": [
+     0,
+     0,
+     0,
+     657000,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "note": "Leads = leads taken in that month by creation date (Lead Board + leads moved to the Master Pipeline), credited per the lead-credit formula. Pre-Approved = of that month's leads, how many are pre-approved now (Process Stage &ldquo;Pre Approved&rdquo; or Status Shopping / Accepted Offer / In Contract / Funded; every lead that reached the Master Pipeline counts) &mdash; so a lead approved after its month still counts in its intake month. Closed = loans funded that month by closing date, credited to the LO column. Matt is credited on every lead and closing he is listed on in any role (LO, Junior, Biz Dev), so person rows do not sum to team totals."
  }
 }

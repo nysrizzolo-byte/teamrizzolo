@@ -276,6 +276,43 @@ def pane_mtd():
     </div>
 '''
 
+# ---------------------------------------------------------------- LO SCORECARD
+def pane_scorecard():
+    sc = d.get("lo_scorecard")
+    if not sc:
+        return ""
+    def pct(a, b):
+        return "%.0f%%" % (a / b * 100) if b else "&mdash;"
+    def vc(v):
+        return "&mdash;" if not v else ("$%.2fM" % (v / 1e6) if v >= 1e6 else "$%dK" % round(v / 1000))
+    summ = "".join(
+        f'<tr><td style="color:{r["color"]}">{r["name"]}</td><td>{sum(r["leads"])}</td><td>{sum(r["pa"])}</td>'
+        f'<td class="td-bold">{pct(sum(r["pa"]), sum(r["leads"]))}</td><td>{sum(r["units"])}</td>'
+        f'<td class="td-bold">{usd(sum(r["vol"]))}</td></tr>' for r in sc["rows"])
+    cards = []
+    for r in sc["rows"]:
+        body = "".join(
+            f'<tr><td style="text-align:left">{FULL[M[i]]}</td><td>{cell(r["leads"][i])}</td><td>{cell(r["pa"][i])}</td>'
+            f'<td>{pct(r["pa"][i], r["leads"][i])}</td><td>{cell(r["units"][i])}</td><td class="td-bold">{vc(r["vol"][i])}</td></tr>'
+            for i in range(len(M)))
+        cards.append(f'''      <div class="section"><div class="section-title" style="color:{r["color"]}">{r["name"]}</div>
+        <div class="tbl-wrap"><div class="tbl-scroll"><table>
+          <thead><tr><th style="text-align:left">Month</th><th>Leads In</th><th>Pre-Approved</th><th>PA %</th><th>Closed</th><th>Volume Closed</th></tr></thead>
+          <tbody>{body}<tr class="team-row"><td style="text-align:left">YTD</td><td>{sum(r["leads"])}</td><td>{sum(r["pa"])}</td><td>{pct(sum(r["pa"]), sum(r["leads"]))}</td><td>{sum(r["units"])}</td><td>{usd(sum(r["vol"]))}</td></tr></tbody>
+        </table></div></div>
+      </div>
+''')
+    return f'''    <div class="pane" id="pane-scorecard">
+      <div class="page-header"><div class="page-eyebrow">2026 Year-to-Date</div><div class="page-title">LO Scorecard</div><div class="page-sub">Leads taken in, how many are pre-approved, and volume closed &middot; by month &middot; {d["pull_date"]}</div></div>
+      <div class="section"><div class="section-title">YTD Summary</div>
+        <div class="tbl-wrap"><div class="tbl-scroll"><table>
+          <thead><tr><th>Loan Officer</th><th>Leads In</th><th>Pre-Approved</th><th>PA %</th><th>Closed</th><th>Volume Closed</th></tr></thead>
+          <tbody>{summ}</tbody></table></div></div>
+        <p style="font-size:10px;color:var(--text3);margin-top:8px">{sc["note"]}</p>
+      </div>
+{"".join(cards)}    </div>
+'''
+
 # ---------------------------------------------------------------- SPLICE
 # Everything from the Overview pane up to the portal footer is regenerated wholesale.
 first = html.find('<div class="pane active" id="pane-overview">')
@@ -285,8 +322,17 @@ if first < 0 or last < 0 or last < first:
 a = html.rfind("\n", 0, first) + 1
 b = html.rfind("\n", 0, last) + 1
 body = pane_overview() + "\n" + pane_bylo() + "\n" + pane_lp() + "\n" + pane_vol() + "\n" \
-     + pane_weekly() + "\n" + pane_wtd() + "\n" + pane_mtd() + "\n"
+     + pane_scorecard() + "\n" + pane_weekly() + "\n" + pane_wtd() + "\n" + pane_mtd() + "\n"
 html = html[:a] + body + html[b:]
+
+# Reports nav: add the LO Scorecard item once, right after Loan Volume.
+if d.get("lo_scorecard") and "showPane('scorecard'" not in html:
+    vol_nav = html.find("showPane('vol',this)")
+    if vol_nav < 0:
+        sys.exit("FATAL: Loan Volume nav item not found")
+    eol = html.find("\n", vol_nav) + 1
+    html = (html[:eol] + '    <div class="nav-item" onclick="showPane(\'scorecard\',this)">'
+            '<span class="nav-dot" style="background:#ff642e"></span>LO Scorecard</div>\n' + html[eol:])
 
 # Current Period nav: regenerated between its section header and the Personal section.
 NAV_START = '<div class="nav-section">Current Period</div>'
