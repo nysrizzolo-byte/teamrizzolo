@@ -56,7 +56,7 @@
   7493499,
   2530250
  ],
- "pipeline_note": "Active Rolling Pipeline: $17.87M across 28 open deals. Open deals in Limbo, Ready for Setup and Prep for Submission (Accepted Offers and Loans in Setup are empty), plus the October + November groups. Excludes Closed/Funded, dead, and past funded months.",
+ "pipeline_note": "Active Rolling Pipeline: $17.87M across 28 open deals. Open deals in Limbo, Ready for Setup and Prep for Submission (Accepted Offers and Loans in Setup are empty), plus the October + November groups. Excludes Closed/Funded, dead, and past funded months. Deals Matt shares with another LO are credited in full to both, so LO rows can exceed the team total.",
  "credit_note": "Leads with 203K Way as Referral Contact are credited to Matt + the Junior &mdash; <strong>Matt + Elvis</strong>, <strong>Matt + Jesse</strong>, <strong>Matt + James</strong>; no/other junior &rarr; <strong>Matt - 203K Way</strong>. Leads Alasia enters &rarr; <strong>Sal Rizzolo</strong>. Everyone else = the person who created the lead. Leads counted from the Lead Board <strong>plus</strong> Master Pipeline deals created this year (leads moved to the pipeline still count, dated by their creation log). Richard Luxmore's leads are excluded. Lead dates bucketed in America/New_York.",
  "lead_credit": [
   {
@@ -314,8 +314,8 @@
   {
    "name": "Matthew Porcaro",
    "color": "#7b6bd6",
-   "deals": 3,
-   "vol": 1667500
+   "deals": 4,
+   "vol": 2385500
   },
   {
    "name": "Theresa Feehan",
@@ -593,7 +593,7 @@
    "name": "203K Way Team",
    "color": "#7b6bd6",
    "leads": 157,
-   "contract": 3,
+   "contract": 4,
    "funded": 8,
    "pct": "5.1%&#9733;",
    "badge": "badge-gray",
@@ -610,7 +610,7 @@
    "status": "Strong"
   }
  ],
- "pull_through_note": "Pull-through = 2026 funded &divide; YTD credited leads (Lead Board + leads moved to the Master Pipeline). 203K Way Team groups all Matt + Junior 203K leads plus Matt's direct leads (157) against Matt-owned fundings. &#9733; 203K benchmark: 40% lead-to-board / 20% app. Richard Luxmore is excluded from lead counts and per-person tables; his 16 fundings ($9.45M) remain in the team funded and volume totals, so person rows do not sum to the team total. Elvis Regis solo, Rob Scaccia and Nicholas Lisi are omitted.",
+ "pull_through_note": "Pull-through = 2026 funded &divide; YTD credited leads (Lead Board + leads moved to the Master Pipeline). 203K Way Team groups all Matt + Junior 203K leads plus Matt's direct leads (157) against Matt-owned fundings. &#9733; 203K benchmark: 40% lead-to-board / 20% app. Richard Luxmore is excluded from lead counts and per-person tables; his 16 fundings ($9.45M) remain in the team funded and volume totals, and deals Matt shares with another LO count in full for both (Matt-owned fundings include the Paulino deal shared with Richard), so person rows do not sum to the team total. Elvis Regis solo, Rob Scaccia and Nicholas Lisi are omitted.",
  "avg_loan": 588091,
  "vol_kpis": [
   {
